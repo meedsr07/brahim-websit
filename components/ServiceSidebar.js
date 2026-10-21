@@ -35,12 +35,12 @@ export default function ServiceSidebar({ items, message }) {
         <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-muted">
           En aquesta pàgina
         </p>
-        <ul className="mt-3 space-y-1.5 text-sm">
+        <ul className="mt-3 space-y-0.5 text-sm">
           {items.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="inline-flex min-h-8 items-center text-ink/65 transition-colors hover:text-ink"
+                className="inline-flex min-h-11 w-full items-center text-ink/65 transition-colors hover:text-ink lg:min-h-8"
               >
                 {item.label}
               </Link>

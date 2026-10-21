@@ -4,10 +4,10 @@ export default function Logo({ tone = "dark", className = "" }) {
   const isLight = tone === "light";
 
   return (
-    <span className={`inline-flex items-center gap-3 ${className}`}>
+    <span className={`inline-flex min-w-0 items-center gap-2.5 sm:gap-3 ${className}`}>
       <svg
         viewBox="0 0 44 44"
-        className={`h-10 w-10 shrink-0 ${isLight ? "text-cream" : "text-ink"}`}
+        className={`h-9 w-9 shrink-0 sm:h-10 sm:w-10 ${isLight ? "text-cream" : "text-ink"}`}
         aria-hidden="true"
         focusable="false"
       >
@@ -22,18 +22,18 @@ export default function Logo({ tone = "dark", className = "" }) {
           fill="#D98E26"
         />
       </svg>
-      <span className="flex min-w-0 flex-col">
+      <span className="hidden min-w-0 flex-col min-[320px]:flex">
         <span
-          className={`text-[10.5px] font-extrabold uppercase leading-tight tracking-[0.1em] sm:text-[12px] ${
+          className={`whitespace-nowrap text-[10px] font-extrabold uppercase leading-tight tracking-[0.1em] min-[360px]:text-[10.5px] sm:text-[12px] ${
             isLight ? "text-cream" : "text-ink"
           }`}
         >
           {business.brand.line1}
         </span>
         <span className="mt-1 flex items-center gap-2">
-          <span className="h-px w-5 bg-amber-deep" aria-hidden="true" />
+          <span className="h-px w-5 shrink-0 bg-amber-deep" aria-hidden="true" />
           <span
-            className={`text-[10px] font-bold uppercase tracking-[0.38em] ${
+            className={`whitespace-nowrap text-[9px] font-bold uppercase tracking-[0.38em] min-[360px]:text-[10px] ${
               isLight ? "text-cream/65" : "text-muted"
             }`}
           >
