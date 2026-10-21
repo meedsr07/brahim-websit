@@ -3,12 +3,12 @@ import { WhatsAppButton } from "./Buttons";
 
 export default function SimpleProcess({
   id = "proceso-servicio",
-  eyebrow = "Cómo pedirlo",
+  eyebrow = "Com demanar-ho",
   title,
   intro,
   steps,
   message = whatsappMessages.presupuesto,
-  cta = "Solicitar presupuesto",
+  cta = "Demanar pressupost",
 }) {
   return (
     <section

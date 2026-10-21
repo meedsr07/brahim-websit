@@ -21,7 +21,7 @@ export default function ServiceDetail({ service }) {
 
           <div className="mt-6 border-l border-line pl-4 sm:pl-5">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-muted">
-              Cuándo lo necesitas
+              Quan el necessites
             </p>
             <ul className="mt-3 space-y-2.5">
               {service.needs.map((need) => (

@@ -17,11 +17,26 @@
 @layer base {
   :root {
     color-scheme: light;
+    /* Altura real de la cabecera fija (barra superior + barra principal). */
+    --header-offset: 72px;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --header-offset: 108px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --header-offset: 120px;
+    }
   }
 
   html {
     scroll-behavior: smooth;
     scrollbar-gutter: stable;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -33,6 +48,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
   }
 
   ::selection {
@@ -67,8 +83,14 @@
   }
 
   [id] {
-    scroll-margin-top: 7rem;
+    scroll-margin-top: calc(var(--header-offset) + 1.5rem);
   }
+
+  @media (min-width: 768px) {
+    body { padding-bottom: 0; }
+  }
+
+  input, textarea, select, button { font: inherit; }
 }
 
 @layer utilities {

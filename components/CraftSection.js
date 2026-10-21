@@ -40,24 +40,24 @@ export default function CraftSection() {
             className="absolute -bottom-3 -left-3 -z-10 h-24 w-24 border-b border-l border-amber/50"
           />
           <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
-            Imágenes de referencia del oficio.
+            Imatges de referència de l'ofici.
           </p>
         </div>
 
         <div className="max-w-lg">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber-deep">
-            Oficio y detalle
+            Ofici i detall
           </p>
           <h2
             id="oficio-title"
             className="mt-4 font-display text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.02] tracking-[-0.03em] text-ink"
           >
-            El detalle importa tanto como el resultado
+            El detall importa tant com el resultat
           </h2>
           <p className="mt-5 text-sm leading-7 text-muted sm:text-base sm:leading-8">
-            Una instalación bien resuelta debe ser segura, funcional y fácil de
-            mantener. Antes de intervenir conviene entender cómo funciona y qué
-            necesita, tanto en electricidad como en fontanería.
+            Una instal·lació ben resolta ha de ser segura, funcional i fàcil de
+            mantenir. Abans d'intervenir convé entendre com funciona i què
+            necessita, tant en electricitat com en lampisteria.
           </p>
 
           <ul className="mt-7 space-y-4 border-t border-line pt-6">
@@ -66,8 +66,7 @@ export default function CraftSection() {
                 <BoltIcon className="h-4 w-4" />
               </span>
               <p className="text-sm leading-7 text-ink/70">
-                Revisamos el origen de la avería antes de plantear la
-                reparación.
+                Revisem l'origen de l'avaria abans de plantejar la reparació.
               </p>
             </li>
             <li className="flex items-start gap-3.5">
@@ -75,14 +74,14 @@ export default function CraftSection() {
                 <DropletIcon className="h-4 w-4" />
               </span>
               <p className="text-sm leading-7 text-ink/70">
-                En fontanería, valoramos el punto afectado y el estado de la
-                instalación.
+                En lampisteria, valorem el punt afectat i l'estat de la
+                instal·lació.
               </p>
             </li>
           </ul>
 
           <TextLink href="/contacto" className="mt-7">
-            Cuéntanos qué necesitas
+            Explica'ns què necessites
           </TextLink>
         </div>
       </div>

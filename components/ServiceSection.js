@@ -75,7 +75,7 @@ export default function ServiceSection({
             </LinkButton>
             <WhatsAppButton
               message={message}
-              label="Consultar por WhatsApp"
+              label="Consulta per WhatsApp"
               variant="outline"
             />
           </div>

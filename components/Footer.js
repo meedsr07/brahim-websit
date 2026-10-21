@@ -22,14 +22,14 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              aria-label={`${business.name} — ir al inicio`}
+              aria-label={`${business.name} — ves a l'inici`}
               className="inline-flex rounded-sm"
             >
               <Logo tone="light" />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-7 text-cream/65">
-              Servicios de electricidad y fontanería en Girona. Instalaciones,
-              reparaciones y mantenimiento con contacto directo.
+              Serveis d'electricitat i lampisteria a Girona. Instal·lacions,
+              reparacions i manteniment amb contacte directe.
             </p>
             <p className="mt-5 flex items-start gap-2.5 text-sm font-semibold text-cream/80">
               <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-amber" />
@@ -37,9 +37,9 @@ export default function Footer() {
             </p>
           </div>
 
-          <nav aria-label="Servicios">
+          <nav aria-label="Serveis">
             <h2 className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-amber">
-              Servicios
+              Serveis
             </h2>
             <ul className="mt-5 space-y-3 text-sm">
               <li>
@@ -47,7 +47,7 @@ export default function Footer() {
                   href="/electricidad"
                   className="text-cream/70 transition-colors hover:text-cream"
                 >
-                  Electricidad
+                  Electricitat
                 </Link>
               </li>
               <li>
@@ -55,7 +55,7 @@ export default function Footer() {
                   href="/fontaneria"
                   className="text-cream/70 transition-colors hover:text-cream"
                 >
-                  Fontanería
+                  Lampisteria
                 </Link>
               </li>
               <li>
@@ -63,7 +63,7 @@ export default function Footer() {
                   href="/#proceso"
                   className="text-cream/70 transition-colors hover:text-cream"
                 >
-                  Cómo trabajamos
+                  Com treballem
                 </Link>
               </li>
               <li>
@@ -71,7 +71,7 @@ export default function Footer() {
                   href="/contacto"
                   className="text-cream/70 transition-colors hover:text-cream"
                 >
-                  Contacto
+                  Contacte
                 </Link>
               </li>
             </ul>
@@ -79,7 +79,7 @@ export default function Footer() {
 
           <div>
             <h2 className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-amber">
-              Contacto
+              Contacte
             </h2>
             <ul className="mt-5 space-y-3 text-sm">
               <li>
@@ -104,8 +104,8 @@ export default function Footer() {
                 </a>
               </li>
               <li className="pt-1 text-xs leading-6 text-cream/45">
-                Horario de atención: consultar disponibilidad por WhatsApp o
-                teléfono.
+                Horari d'atenció: consulta la disponibilitat per WhatsApp o
+                telèfon.
               </li>
             </ul>
           </div>
@@ -118,14 +118,14 @@ export default function Footer() {
               {business.location.serviceAreaLabel}
               <br />
               <span className="text-cream/45">
-                Consulta otras localidades según disponibilidad.
+                Consulta altres poblacions segons disponibilitat.
               </span>
             </p>
             <Link
               href="/contacto"
               className="mt-4 inline-flex items-center gap-1.5 text-sm font-extrabold text-cream transition-colors hover:text-amber"
             >
-              Cómo contactar
+              Com contactar
               <ArrowUpRightIcon className="h-4 w-4" />
             </Link>
           </div>
@@ -133,16 +133,16 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-cream/10 pt-6">
           <p className="max-w-2xl text-xs leading-6 text-cream/40">
-            El servicio de urgencias eléctricas está sujeto a disponibilidad
-            confirmada. Los servicios, el alcance y el presupuesto se concretan
-            al valorar cada caso.
+            El servei d'urgències elèctriques està subjecte a disponibilitat
+            confirmada. Els serveis, l'abast i el pressupost es concreten en
+            valorar cada cas.
           </p>
           <div className="mt-5 flex flex-col gap-3 text-[11px] leading-5 text-cream/35 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {year} {business.name}. Todos los derechos reservados.
+              © {year} {business.name}. Tots els drets reservats.
             </p>
             <p>
-              Fotografías de referencia:{" "}
+              Fotografies de referència:{" "}
               <a
                 href="https://unsplash.com"
                 target="_blank"
@@ -151,7 +151,7 @@ export default function Footer() {
               >
                 Unsplash
               </a>
-              . No se presentan como trabajos propios.
+              . No es presenten com a treballs propis.
             </p>
           </div>
         </div>

@@ -11,9 +11,9 @@ export default function PageHero({
   image,
   imageAlt,
   message,
-  primaryLabel = "Solicitar presupuesto",
-  secondaryLabel = "Llamar ahora",
-  caption = "Imagen de referencia del oficio.",
+  primaryLabel = "Demanar pressupost",
+  secondaryLabel = "Truca ara",
+  caption = "Imatge de referència de l'ofici.",
   bullets = [],
 }) {
   return (
@@ -58,7 +58,7 @@ export default function PageHero({
             </div>
             <p className="mt-4 flex items-center gap-2 text-xs font-semibold text-muted">
               <span className="h-1.5 w-1.5 rounded-full bg-[#1B6B4A]" aria-hidden="true" />
-              Contacto directo · {business.location.city}
+              Contacte directe · {business.location.city}
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function PageHero({
                 className="object-cover"
               />
               <div className="absolute left-0 top-6 bg-amber px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.2em] text-ink">
-                {business.location.city} · Servicio local
+                {business.location.city} · Servei local
               </div>
             </div>
             <figcaption className="mt-4 flex items-center justify-between gap-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">

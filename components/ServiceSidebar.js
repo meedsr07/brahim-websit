@@ -8,17 +8,17 @@ export default function ServiceSidebar({ items, message }) {
     <aside className="h-fit lg:sticky lg:top-32">
       <div className="border border-line bg-cream p-5 sm:p-6">
         <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-amber-deep">
-          Contacto directo
+          Contacte directe
         </p>
         <p className="mt-3 font-display text-2xl leading-tight tracking-[-0.02em] text-ink">
-          ¿Te ayudamos con tu caso?
+          T'ajudem amb el teu cas?
         </p>
         <p className="mt-2 text-xs leading-6 text-muted">
-          Cuéntanos qué ocurre en tu vivienda o local en {business.location.city}.
+          Explica'ns què passa al teu habitatge o local a {business.location.city}.
         </p>
         <WhatsAppButton
           message={message || whatsappMessages.general}
-          label="Escribir por WhatsApp"
+          label="Escriure per WhatsApp"
           variant="green"
           className="mt-4 w-full"
         />
@@ -33,7 +33,7 @@ export default function ServiceSidebar({ items, message }) {
 
       <nav aria-label="En esta página" className="mt-6">
         <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-muted">
-          En esta página
+          En aquesta pàgina
         </p>
         <ul className="mt-3 space-y-1.5 text-sm">
           {items.map((item) => (
@@ -51,7 +51,7 @@ export default function ServiceSidebar({ items, message }) {
 
       <p className="mt-6 flex items-center gap-2 border-t border-line pt-5 text-xs font-semibold text-muted">
         <MapPinIcon className="h-4 w-4 text-amber-deep" />
-        {business.location.city} · Servicio local
+        {business.location.city} · Servei local
       </p>
     </aside>
   );

@@ -48,7 +48,7 @@ export function LinkButton({
 
 export function WhatsAppButton({
   message = whatsappMessages.general,
-  label = "Consultar por WhatsApp",
+  label = "Consulta per WhatsApp",
   ariaLabel,
   variant = "amber",
   className = "",
@@ -77,7 +77,7 @@ export function WhatsAppButton({
 }
 
 export function PhoneButton({
-  label = "Llamar ahora",
+  label = "Truca ara",
   variant = "outline",
   className = "",
   showIcon = true,
@@ -86,7 +86,7 @@ export function PhoneButton({
   return (
     <a
       href={business.contact.telHref}
-      aria-label={`Llamar al ${business.contact.phoneDisplay}`}
+      aria-label={`Truca al ${business.contact.phoneDisplay}`}
       className={cx(
         base,
         buttonVariants[variant],

@@ -30,11 +30,8 @@ const routes = [
 export default function sitemap() {
   if (!siteUrl) return [];
 
-  const lastModified = new Date();
-
   return routes.map((route) => ({
     url: absoluteUrl(route.path),
-    lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
     ...(route.images.length

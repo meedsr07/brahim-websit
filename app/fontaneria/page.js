@@ -25,15 +25,15 @@ import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Fontanero en Girona | Reparaciones y fugas de agua",
+  title: "Lampista a Girona | Reparacions i fuites d'aigua",
   description:
-    "Fontanero en Girona para reparar grifos, cisternas, desagües y fugas de agua, además de instalaciones y mantenimiento. Consulta tu caso por WhatsApp.",
+    "Lampista a Girona per reparar aixetes, cisternes, desguassos i fuites d'aigua, a més d'instal·lacions i manteniment. Consulta el teu cas per WhatsApp.",
   path: "/fontaneria",
 });
 
 const breadcrumbs = [
-  { name: "Inicio", path: "/" },
-  { name: "Fontanería", path: "/fontaneria" },
+  { name: "Inici", path: "/" },
+  { name: "Lampisteria", path: "/fontaneria" },
 ];
 
 export default function FontaneriaPage() {
@@ -43,13 +43,13 @@ export default function FontaneriaPage() {
 
       <PageHero
         breadcrumbs={breadcrumbs}
-        eyebrow="Fontanería · Girona"
-        title="Fontanero en Girona para reparaciones, fugas e instalaciones"
-        intro="Reparamos problemas de fontanería, valoramos fugas y humedades, e instalamos componentes de agua. Cuéntanos qué ocurre y te indicamos cómo podemos ayudarte."
+        eyebrow="Lampisteria · Girona"
+        title="Lampista a Girona per a reparacions, fuites i instal·lacions"
+        intro="Reparem problemes de lampisteria, valorem fuites i humitats, i instal·lem components d'aigua. Explica'ns què passa i t'indicarem com et podem ajudar."
         image={media.fontaneriaBano.image}
         imageAlt={media.fontaneriaBano.alt}
         message={whatsappMessages.fontaneria}
-        bullets={["Reparaciones", "Fugas y humedades", "Instalaciones"]}
+        bullets={["Reparacions", "Fuites i humitats", "Instal·lacions"]}
       />
 
       <section className="bg-paper py-16 sm:py-20 lg:py-24">
@@ -57,28 +57,28 @@ export default function FontaneriaPage() {
           <ServiceSidebar
             message={whatsappMessages.fontaneria}
             items={[
-              { label: "Reparaciones", href: "#reparaciones" },
-              { label: "Fugas y humedades", href: "#fugas" },
-              { label: "Instalaciones", href: "#instalaciones" },
-              { label: "Mantenimiento", href: "#mantenimiento" },
-              { label: "Problemas habituales", href: "#problemas" },
-              { label: "Cómo pedirlo", href: "#proceso-servicio" },
-              { label: "Preguntas frecuentes", href: "#faq" },
+              { label: "Reparacions", href: "#reparaciones" },
+              { label: "Fuites i humitats", href: "#fugas" },
+              { label: "Instal·lacions", href: "#instalaciones" },
+              { label: "Manteniment", href: "#mantenimiento" },
+              { label: "Problemes habituals", href: "#problemas" },
+              { label: "Com demanar-ho", href: "#proceso-servicio" },
+              { label: "Preguntes freqüents", href: "#faq" },
             ]}
           />
 
           <div>
             <div className="max-w-3xl">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber-deep">
-                Servicios de fontanería
+                Serveis de lampisteria
               </p>
               <h2 className="mt-4 font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.02] tracking-[-0.03em] text-ink">
-                Soluciones para el agua de tu vivienda o local
+                Solucions per a l'aigua del teu habitatge o local
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted sm:text-base sm:leading-8">
-                Desde una cisterna que no para hasta una instalación que
-                necesita renovarse. Revisamos el punto afectado, explicamos las
-                opciones y acordamos el alcance antes de intervenir.
+                Des d'una cisterna que no para fins a una instal·lació que cal
+                renovar. Revisem el punt afectat, expliquem les opcions i
+                acordem l'abast abans d'intervenir.
               </p>
             </div>
 
@@ -90,12 +90,12 @@ export default function FontaneriaPage() {
 
             <div className="mt-10 flex flex-col gap-3 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
               <p className="max-w-md text-sm leading-7 text-muted">
-                Si no sabes de dónde viene el problema, cuéntanos qué has
-                observado y te orientamos.
+                Si no saps d'on ve el problema, explica'ns què has observat i
+                t'orientarem.
               </p>
               <WhatsAppButton
                 message={whatsappMessages.fontaneria}
-                label="Consultar mi caso"
+                label="Consulta el meu cas"
                 variant="dark"
               />
             </div>
@@ -112,18 +112,18 @@ export default function FontaneriaPage() {
           <div className="grid gap-6 lg:grid-cols-[1fr_0.75fr] lg:items-end">
             <div>
               <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber-deep">
-                Consultas habituales
+                Consultes habituals
               </p>
               <h2
                 id="problemas-title"
                 className="mt-4 max-w-2xl font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.02] tracking-[-0.03em] text-ink"
               >
-                Problemas de fontanería habituales
+                Problemes habituals de lampisteria
               </h2>
             </div>
             <p className="max-w-md text-sm leading-7 text-muted lg:justify-self-end">
-              Cada instalación es distinta. Estas situaciones sirven para
-              orientarte; el alcance real se valora al revisar el caso.
+              Cada instal·lació és diferent. Aquestes situacions serveixen per
+              orientar-te; l'abast real es valora en revisar el cas.
             </p>
           </div>
 
@@ -161,26 +161,26 @@ export default function FontaneriaPage() {
           <div>
             <p className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber">
               <AlertIcon className="h-4 w-4" />
-              Fugas de agua
+              Fuites d'aigua
             </p>
             <h2
               id="fuga-title"
               className="mt-4 max-w-2xl font-display text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.02] tracking-[-0.03em] text-cream"
             >
-              Qué hacer mientras esperas una revisión
+              Què cal fer mentre esperes una revisió
             </h2>
             <p className="mt-5 max-w-xl text-sm leading-7 text-cream/65 sm:text-base sm:leading-8">
-              Ante una fuga visible, lo primero es reducir el riesgo y evitar
-              que el agua siga avanzando. Si no puedes hacerlo con seguridad,
-              no fuerces nada y busca ayuda.
+              Davant d'una fuita visible, el primer és reduir el risc i evitar
+              que l'aigua continuï avançant. Si no ho pots fer amb seguretat,
+              no forcis res i busca ajuda.
             </p>
 
             <ul className="mt-7 space-y-4">
               {[
-                "Cierra la llave de paso general si puedes acceder a ella con seguridad.",
-                "Recoge el agua y retira objetos que puedan dañarse.",
-                "Evita tocar cables o enchufes que estén en contacto con agua.",
-                "Cuéntanos dónde está la fuga y desde cuándo ocurre.",
+                "Tanca la clau de pas general si hi pots accedir amb seguretat.",
+                "Recull l'aigua i retira els objectes que es puguin fer malbé.",
+                "Evita tocar cables o endolls que estiguin en contacte amb aigua.",
+                "Explica'ns on és la fuita i des de quan passa.",
               ].map((tip) => (
                 <li
                   key={tip}
@@ -193,14 +193,14 @@ export default function FontaneriaPage() {
             </ul>
 
             <p className="mt-6 max-w-xl text-xs leading-6 text-cream/45">
-              Si hay riesgo eléctrico o la fuga afecta a la estructura, no
-              manipules la instalación y contacta con los servicios de
-              emergencia si es necesario.
+              Si hi ha risc elèctric o la fuita afecta l'estructura, no
+              manipulis la instal·lació i contacta amb els serveis
+              d'emergència si cal.
             </p>
 
             <WhatsAppButton
               message={whatsappMessages.fontaneriaFuga}
-              label="Consultar una fuga"
+              label="Consulta una fuita"
               variant="amber"
               className="mt-7"
             />
@@ -217,29 +217,29 @@ export default function FontaneriaPage() {
               />
             </div>
             <figcaption className="mt-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-cream/40">
-              Imagen de referencia del oficio.
+              Imatge de referència de l'ofici.
             </figcaption>
           </figure>
         </div>
       </section>
 
       <SimpleProcess
-        title="Pedir un fontanero en Girona, paso a paso"
-        intro="Cuéntanos qué elemento falla y qué has observado. Si puedes, indica la marca o el modelo y envía una foto del punto afectado."
+        title="Demanar un lampista a Girona, pas a pas"
+        intro="Explica'ns quin element falla i què has observat. Si pots, indica la marca o el model i envia una foto del punt afectat."
         message={whatsappMessages.fontaneria}
-        cta="Consultar mi reparación"
+        cta="Consulta la meva reparació"
         steps={[
           {
-            title: "Describe el problema",
-            text: "Indica si es una fuga, un grifo, una cisterna, un desagüe u otro elemento, y desde cuándo ocurre.",
+            title: "Descriu el problema",
+            text: "Indica si és una fuita, una aixeta, una cisterna, un desguàs o un altre element, i des de quan passa.",
           },
           {
-            title: "Valoramos el punto afectado",
-            text: "Revisamos la información y te pedimos lo necesario para entender el estado de la instalación.",
+            title: "Valorem el punt afectat",
+            text: "Revisem la informació i et demanem el necessari per entendre l'estat de la instal·lació.",
           },
           {
-            title: "Acordamos la intervención",
-            text: "Te explicamos las opciones y, si corresponde, preparamos un presupuesto antes de realizar el trabajo.",
+            title: "Acordem la intervenció",
+            text: "T'expliquem les opcions i, si escau, preparem un pressupost abans de fer la feina.",
           },
         ]}
       />
@@ -247,28 +247,28 @@ export default function FontaneriaPage() {
       <section className="border-b border-line bg-paper py-8">
         <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-4 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
           <p className="text-sm text-muted">
-            ¿También necesitas resolver una avería eléctrica? Trabajamos las
-            dos especialidades.
+            També necessites resoldre una avaria elèctrica? Treballem les dues
+            especialitats.
           </p>
           <Link
             href="/electricidad"
             className="group inline-flex items-center gap-2 text-sm font-extrabold text-ink transition-colors hover:text-amber-deep"
           >
-            Ver servicios de electricidad
+            Veure serveis d'electricitat
             <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
       </section>
 
       <FAQ
-        title="Preguntas frecuentes sobre fontanería"
-        intro="Respuestas sobre fugas, reparaciones, instalaciones y mantenimiento. Si tu problema no está aquí, cuéntanoslo."
+        title="Preguntes freqüents sobre lampisteria"
+        intro="Respostes sobre fuites, reparacions, instal·lacions i manteniment. Si el teu problema no hi és, explica'ns-el."
         items={plumbingFaqs}
       />
 
       <FinalCTA
-        title="¿Necesitas un fontanero en Girona?"
-        text="Cuéntanos qué ocurre con el agua de tu vivienda o local. Te indicamos cómo podemos ayudarte y qué siguiente paso tiene sentido."
+        title="Necessites un lampista a Girona?"
+        text="Explica'ns què passa amb l'aigua del teu habitatge o local. T'indicarem com et podem ajudar i quin pas següent té sentit."
         message={whatsappMessages.fontaneria}
       />
     </>

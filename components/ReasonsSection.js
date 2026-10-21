@@ -17,7 +17,7 @@ const icons = {
 export default function ReasonsSection() {
   return (
     <section
-      aria-labelledby="razones-title"
+      aria-labelledby="motius-title"
       className="relative isolate overflow-hidden bg-ink py-16 text-cream sm:py-20 lg:py-24"
     >
       <div
@@ -27,20 +27,20 @@ export default function ReasonsSection() {
       <div className="mx-auto grid w-full max-w-[1240px] gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:px-10">
         <div className="lg:sticky lg:top-32 lg:self-start">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber">
-            Por qué contactarnos
+            Per què contactar-nos
           </p>
           <h2
-            id="razones-title"
+            id="motius-title"
             className="mt-4 max-w-md font-display text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.02] tracking-[-0.03em] text-cream"
           >
-            Una forma directa de resolverlo
+            Una manera directa de resoldre-ho
           </h2>
           <p className="mt-5 max-w-sm text-sm leading-7 text-cream/60">
-            Sin promesas que no podamos cumplir. La información de esta web se
-            limita a los servicios y al contacto que el negocio puede confirmar.
+            Sense promeses que no puguem complir. La informació d'aquest web es
+            limita als serveis i al contacte que el negoci pot confirmar.
           </p>
           <TextLink href="/contacto" tone="light" className="mt-7">
-            Ver cómo contactar
+            Veure com contactar
           </TextLink>
         </div>
 

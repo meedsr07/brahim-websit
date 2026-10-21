@@ -5,8 +5,8 @@ import JsonLd from "./JsonLd";
 
 export default function FAQ({
   id = "faq",
-  eyebrow = "Preguntas frecuentes",
-  title = "Lo que conviene saber antes de contactar",
+  eyebrow = "Preguntes freqüents",
+  title = "El que convé saber abans de contactar",
   intro,
   items,
   withSchema = true,
@@ -36,7 +36,7 @@ export default function FAQ({
           ) : null}
 
           <div className="mt-7 border-l-2 border-amber pl-4">
-            <p className="text-sm font-bold text-ink">¿No ves tu caso?</p>
+            <p className="text-sm font-bold text-ink">No hi veus el teu cas?</p>
             <a
               href={whatsappUrl(whatsappMessages.general)}
               target="_blank"
@@ -44,7 +44,7 @@ export default function FAQ({
               className="mt-1 inline-flex items-center gap-2 text-sm font-extrabold text-amber-deep underline decoration-amber/40 underline-offset-4 transition-colors hover:text-ink"
             >
               <WhatsAppIcon className="h-4 w-4" />
-              Cuéntanoslo por WhatsApp
+              Explica'ns-ho per WhatsApp
             </a>
           </div>
         </div>

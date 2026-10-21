@@ -12,21 +12,21 @@ export default function ProcessSection() {
       <div className="mx-auto grid w-full max-w-[1240px] gap-12 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20 lg:px-10">
         <div className="lg:sticky lg:top-32 lg:self-start">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber-deep">
-            Cómo trabajamos
+            Com treballem
           </p>
           <h2
             id="proceso-title"
             className="mt-4 max-w-md font-display text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.03] tracking-[-0.03em] text-ink"
           >
-            Pedir ayuda es sencillo
+            Demanar ajuda és senzill
           </h2>
           <p className="mt-5 max-w-sm text-sm leading-7 text-muted">
-            No hay formularios ni intermediarios. Cuéntanos el caso por
-            WhatsApp o teléfono y te indicamos el siguiente paso.
+            No hi ha formularis ni intermediaris. Explica'ns el cas per
+            WhatsApp o telèfon i t'indicarem el pas següent.
           </p>
           <WhatsAppButton
             message={whatsappMessages.general}
-            label="Empezar por WhatsApp"
+            label="Comença per WhatsApp"
             className="mt-7"
           />
         </div>

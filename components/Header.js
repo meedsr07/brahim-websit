@@ -26,10 +26,41 @@ export default function Header() {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
+    const getFocusable = () => {
+      const menuItems = Array.from(
+        menuRef.current?.querySelectorAll("a[href], button, summary") || [],
+      );
+
+      return [toggleRef.current, ...menuItems].filter(
+        (element) => element && !element.hasAttribute("disabled"),
+      );
+    };
+
     const onKeyDown = (event) => {
       if (event.key === "Escape") {
         setOpen(false);
         toggleRef.current?.focus();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const focusable = getFocusable();
+      if (!focusable.length) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+
+      if (event.shiftKey && (active === first || active === toggleRef.current)) {
+        event.preventDefault();
+        last.focus();
+        return;
+      }
+
+      if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
       }
     };
 
@@ -45,6 +76,18 @@ export default function Header() {
     };
   }, [open]);
 
+  // Evita que el menú quede abierto (y el scroll bloqueado) al pasar a escritorio,
+  // por ejemplo al girar una tablet.
+  useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const onChange = (event) => {
+      if (event.matches) setOpen(false);
+    };
+
+    desktop.addEventListener("change", onChange);
+    return () => desktop.removeEventListener("change", onChange);
+  }, []);
+
   const closeMenu = () => setOpen(false);
 
   return (
@@ -58,7 +101,7 @@ export default function Header() {
             </span>
           </p>
           <div className="flex items-center gap-5">
-            <span className="text-cream/55">Electricidad y fontanería</span>
+            <span className="text-cream/55">Electricitat i lampisteria</span>
             <a
               href={business.contact.telHref}
               className="inline-flex items-center gap-2 text-cream transition-colors hover:text-amber"
@@ -74,15 +117,15 @@ export default function Header() {
         <div className="mx-auto flex h-[72px] w-full max-w-[1240px] items-center justify-between gap-2 px-4 sm:gap-6 sm:px-8 lg:h-[84px] lg:px-10">
           <Link
             href="/"
-            aria-label={`${business.name} — ir al inicio`}
-            className="rounded-sm"
+            aria-label={`${business.name} — ves a l'inici`}
+            className="inline-flex min-h-11 items-center rounded-sm"
             onClick={closeMenu}
           >
             <Logo />
           </Link>
 
           <nav
-            aria-label="Navegación principal"
+            aria-label="Navegació principal"
             className="hidden items-center gap-7 lg:flex"
           >
             {business.navigation.map((item) => {
@@ -113,7 +156,7 @@ export default function Header() {
             <a
               href={business.contact.telHref}
               className="hidden items-center gap-2 rounded-sm px-2 py-2 text-[13px] font-extrabold text-ink transition-colors hover:text-amber-deep xl:inline-flex"
-              aria-label={`Llamar al ${business.contact.phoneDisplay}`}
+              aria-label={`Truca al ${business.contact.phoneDisplay}`}
             >
               <PhoneIcon className="h-4 w-4" />
               {business.contact.phoneDisplay}
@@ -123,13 +166,13 @@ export default function Header() {
               <WhatsAppButton
                 message={whatsappMessages.general}
                 label="WhatsApp"
-                ariaLabel="Consultar por WhatsApp. Se abre WhatsApp en una pestaña nueva."
+                ariaLabel="Consulta per WhatsApp. WhatsApp s'obre en una pestanya nova."
               />
             </div>
 
             <WhatsAppButton
               message={whatsappMessages.general}
-              ariaLabel="Consultar por WhatsApp. Se abre WhatsApp en una pestaña nueva."
+              ariaLabel="Consulta per WhatsApp. WhatsApp s'obre en una pestanya nova."
               iconOnly
               className="lg:hidden"
             />
@@ -140,7 +183,7 @@ export default function Header() {
               onClick={() => setOpen((value) => !value)}
               aria-expanded={open}
               aria-controls="mobile-navigation"
-              aria-label={open ? "Cerrar menú" : "Abrir menú"}
+              aria-label={open ? "Tanca el menú" : "Obre el menú"}
               className="inline-flex h-12 w-12 items-center justify-center rounded-[2px] border border-ink/15 text-ink transition-colors hover:border-ink/40 hover:bg-ink/[0.035] lg:hidden"
             >
               {open ? (
@@ -175,7 +218,7 @@ export default function Header() {
           ref={menuRef}
           className="max-h-[calc(100dvh-72px)] overflow-y-auto px-5 pb-7 pt-2 sm:px-8 md:max-h-[calc(100dvh-108px)]"
         >
-          <nav aria-label="Navegación móvil">
+          <nav aria-label="Navegació mòbil">
             <ul className="divide-y divide-line">
               {business.navigation.map((item) => {
                 const active =
@@ -205,7 +248,7 @@ export default function Header() {
           <div className="mt-6 grid gap-3">
             <WhatsAppButton
               message={whatsappMessages.general}
-              label="Consultar por WhatsApp"
+              label="Consulta per WhatsApp"
               variant="green"
               className="w-full"
             />
@@ -214,13 +257,13 @@ export default function Header() {
               className="inline-flex min-h-12 w-full items-center justify-center gap-2.5 rounded-[2px] border border-ink/20 px-5 py-3 text-sm font-extrabold text-ink transition-colors hover:border-ink/50"
             >
               <PhoneIcon className="h-[18px] w-[18px]" />
-              Llamar al {business.contact.phoneDisplay}
+              Truca al {business.contact.phoneDisplay}
             </a>
           </div>
 
           <p className="mt-5 flex items-center gap-2 text-xs font-semibold text-muted">
             <WhatsAppIcon className="h-4 w-4 text-[#1B6B4A]" />
-            Contacto directo · {business.location.city}
+            Contacte directe · {business.location.city}
           </p>
         </div>
       </div>

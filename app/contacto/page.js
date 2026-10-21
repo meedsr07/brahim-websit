@@ -19,22 +19,22 @@ import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Contacto | Electricidad y fontanería en Girona",
+  title: "Contacte | Electricitat i lampisteria a Girona",
   description:
-    "Contacta por WhatsApp o teléfono para consultar un servicio de electricidad o fontanería en Girona. Te indicamos cómo solicitar presupuesto.",
+    "Contacta per WhatsApp o telèfon per consultar un servei d'electricitat o lampisteria a Girona. T'indiquem com demanar pressupost.",
   path: "/contacto",
 });
 
 const breadcrumbs = [
-  { name: "Inicio", path: "/" },
-  { name: "Contacto", path: "/contacto" },
+  { name: "Inici", path: "/" },
+  { name: "Contacte", path: "/contacto" },
 ];
 
 const quoteSteps = [
-  "Elige WhatsApp o teléfono.",
-  "Cuéntanos qué necesitas y en qué zona de Girona estás.",
-  "Añade una foto si puede ayudar a entender el caso.",
-  "Te confirmamos el siguiente paso y la disponibilidad.",
+  "Tria WhatsApp o telèfon.",
+  "Explica'ns què necessites i a quina zona de Girona ets.",
+  "Afegeix una foto si pot ajudar a entendre el cas.",
+  "Et confirmem el pas següent i la disponibilitat.",
 ];
 
 export default function ContactoPage() {
@@ -54,15 +54,15 @@ export default function ContactoPage() {
             <div className="max-w-2xl">
               <p className="flex items-center gap-3 text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber-deep">
                 <span className="h-px w-8 bg-amber-deep" aria-hidden="true" />
-                Contacto directo · {business.location.city}
+                Contacte directe · {business.location.city}
               </p>
               <h1 className="mt-5 font-display text-[clamp(2.65rem,5.2vw,4.6rem)] leading-[0.99] tracking-[-0.035em] text-ink [text-wrap:balance]">
-                Contacta con un electricista y fontanero en Girona
+                Contacta amb un electricista i un lampista a Girona
               </h1>
               <p className="mt-6 max-w-xl text-[15px] leading-7 text-muted sm:text-base sm:leading-8">
-                Elige WhatsApp o teléfono. Cuéntanos qué necesitas y te
-                indicamos cómo podemos ayudarte. Esta web no utiliza
-                formularios de contacto.
+                Tria WhatsApp o telèfon. Explica'ns què necessites i
+                t'indicarem com et podem ajudar. Aquest web no utilitza
+                formularis de contacte.
               </p>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -80,7 +80,7 @@ export default function ContactoPage() {
                       WhatsApp
                     </span>
                     <span className="mt-1 flex items-center gap-2 text-xs font-semibold text-muted">
-                      Abrir conversación
+                      Obre la conversa
                       <ArrowRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                     </span>
                   </span>
@@ -98,7 +98,7 @@ export default function ContactoPage() {
                       {business.contact.phoneDisplay}
                     </span>
                     <span className="mt-1 flex items-center gap-2 text-xs font-semibold text-muted">
-                      Llamar ahora
+                      Truca ara
                       <ArrowRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                     </span>
                   </span>
@@ -113,10 +113,10 @@ export default function ContactoPage() {
 
             <div className="border border-ink/10 bg-ink p-6 text-cream shadow-[0_26px_60px_-35px_rgba(11,32,39,0.55)] sm:p-8">
               <p className="text-[10px] font-extrabold uppercase tracking-[0.22em] text-amber">
-                Solicitar presupuesto
+                Demanar pressupost
               </p>
               <h2 className="mt-3 font-display text-3xl leading-tight tracking-[-0.025em] text-cream">
-                Cuéntanos tu caso
+                Explica'ns el teu cas
               </h2>
               <ol className="mt-6 space-y-4">
                 {quoteSteps.map((step, index) => (
@@ -134,19 +134,19 @@ export default function ContactoPage() {
               <div className="mt-7 grid gap-2.5">
                 <WhatsAppButton
                   message={whatsappMessages.presupuesto}
-                  label="Solicitar por WhatsApp"
+                  label="Demanar per WhatsApp"
                   variant="amber"
                   className="w-full"
                 />
                 <PhoneButton
-                  label="Llamar ahora"
+                  label="Truca ara"
                   variant="lightOutline"
                   className="w-full"
                 />
               </div>
               <p className="mt-4 text-xs leading-6 text-cream/45">
-                No prometemos un tiempo de respuesta. La disponibilidad se
-                confirma al hablar contigo.
+                No prometem un temps de resposta. La disponibilitat es
+                confirma en parlar amb tu.
               </p>
             </div>
           </div>
@@ -157,33 +157,33 @@ export default function ContactoPage() {
         <div className="mx-auto grid w-full max-w-[1240px] gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_0.9fr] lg:gap-20 lg:px-10">
           <div>
             <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber-deep">
-              Antes de escribir
+              Abans d'escriure
             </p>
             <h2 className="mt-4 max-w-xl font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.02] tracking-[-0.03em] text-ink">
-              Qué información nos ayuda a valorar tu caso
+              Quina informació ens ajuda a valorar el teu cas
             </h2>
             <p className="mt-5 max-w-xl text-sm leading-7 text-muted sm:text-base sm:leading-8">
-              No necesitas preparar un informe. Con unos datos básicos podemos
-              entender qué necesitas y decirte cómo seguir.
+              No cal que preparis cap informe. Amb unes dades bàsiques podem
+              entendre què necessites i dir-te com seguir.
             </p>
 
             <ul className="mt-8 grid gap-0 border-t border-line sm:grid-cols-2">
               {[
                 {
-                  title: "El servicio",
-                  text: "Indica si es electricidad o fontanería, y qué tipo de intervención crees que necesitas.",
+                  title: "El servei",
+                  text: "Indica si és electricitat o lampisteria, i quin tipus d'intervenció creus que necessites.",
                 },
                 {
                   title: "El problema",
-                  text: "Describe qué ocurre, desde cuándo y si ha cambiado o empeorado.",
+                  text: "Descriu què passa, des de quan i si ha canviat o ha empitjorat.",
                 },
                 {
-                  title: "La ubicación",
-                  text: "Dinos en qué zona de Girona estás para confirmar la disponibilidad.",
+                  title: "La ubicació",
+                  text: "Digues-nos a quina zona de Girona ets per confirmar la disponibilitat.",
                 },
                 {
                   title: "Una foto",
-                  text: "Si puedes, envía una imagen del punto afectado. Ayuda, pero no es imprescindible.",
+                  text: "Si pots, envia una imatge del punt afectat. Ajuda, però no és imprescindible.",
                 },
               ].map((item, index) => (
                 <li
@@ -208,14 +208,14 @@ export default function ContactoPage() {
                 href="/electricidad"
                 className="group inline-flex items-center gap-2 text-sm font-extrabold text-ink underline decoration-amber underline-offset-4 transition-colors hover:text-amber-deep"
               >
-                Servicios de electricidad
+                Serveis d'electricitat
                 <ArrowRightIcon className="h-4 w-4" />
               </Link>
               <Link
                 href="/fontaneria"
                 className="group inline-flex items-center gap-2 text-sm font-extrabold text-ink underline decoration-amber underline-offset-4 transition-colors hover:text-amber-deep"
               >
-                Servicios de fontanería
+                Serveis de lampisteria
                 <ArrowRightIcon className="h-4 w-4" />
               </Link>
             </div>
@@ -223,7 +223,7 @@ export default function ContactoPage() {
 
           <aside className="h-fit border border-line bg-cream p-6 sm:p-8">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.22em] text-amber-deep">
-              Zona y disponibilidad
+              Zona i disponibilitat
             </p>
             <h2 className="mt-3 font-display text-3xl leading-tight tracking-[-0.025em] text-ink">
               {business.location.city}
@@ -241,28 +241,28 @@ export default function ContactoPage() {
               <div className="flex items-start justify-between gap-4 py-4">
                 <dt className="flex items-center gap-2 text-muted">
                   <ClockIcon className="h-4 w-4 text-amber-deep" />
-                  Horario
+                  Horari
                 </dt>
                 <dd className="text-right font-bold text-ink">
-                  Consultar disponibilidad
+                  Consulta la disponibilitat
                 </dd>
               </div>
               <div className="flex items-start justify-between gap-4 py-4">
                 <dt className="flex items-center gap-2 text-muted">
                   <AlertIcon className="h-4 w-4 text-amber-deep" />
-                  Urgencias eléctricas
+                  Urgències elèctriques
                 </dt>
                 <dd className="text-right font-bold text-ink">
-                  Según disponibilidad
+                  Segons disponibilitat
                 </dd>
               </div>
               <div className="flex items-start justify-between gap-4 py-4">
                 <dt className="flex items-center gap-2 text-muted">
                   <PhoneIcon className="h-4 w-4 text-amber-deep" />
-                  Contacto
+                  Contacte
                 </dt>
                 <dd className="text-right font-bold text-ink">
-                  WhatsApp y teléfono
+                  WhatsApp i telèfon
                 </dd>
               </div>
             </dl>
@@ -281,14 +281,14 @@ export default function ContactoPage() {
       </section>
 
       <FAQ
-        title="Preguntas frecuentes sobre el contacto"
-        intro="Cómo funciona el contacto, qué puedes enviar y cómo confirmamos la disponibilidad."
+        title="Preguntes freqüents sobre el contacte"
+        intro="Com funciona el contacte, què pots enviar i com confirmem la disponibilitat."
         items={contactFaqs}
       />
 
       <FinalCTA
-        title="Escríbenos y cuéntanos qué necesitas"
-        text="Estamos en Girona y atendemos electricidad y fontanería. Elige WhatsApp o teléfono para consultar tu caso y solicitar presupuesto."
+        title="Escriu-nos i explica'ns què necessites"
+        text="Som a Girona i atenem electricitat i lampisteria. Tria WhatsApp o telèfon per consultar el teu cas i demanar pressupost."
         message={whatsappMessages.contacto}
       />
     </>

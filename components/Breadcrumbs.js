@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Breadcrumbs({ items }) {
   return (
-    <nav aria-label="Migas de pan" className="text-xs font-semibold text-muted">
+    <nav aria-label="Fil d'Ariadna" className="text-xs font-semibold text-muted">
       <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;

@@ -10,7 +10,7 @@ export default function manifest() {
     display: "standalone",
     background_color: "#fbf9f4",
     theme_color: "#0b2027",
-    lang: "es",
+    lang: "ca",
     dir: "ltr",
     icons: [
       {

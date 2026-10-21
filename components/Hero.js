@@ -15,22 +15,22 @@ export default function Hero() {
         <div className="max-w-2xl">
           <p className="rise flex items-center gap-3 text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber-deep">
             <span className="h-px w-8 bg-amber-deep" aria-hidden="true" />
-            {business.location.city} · Electricidad y fontanería
+            {business.location.city} · Electricitat i lampisteria
           </p>
 
           <h1 className="rise rise-1 mt-5 font-display text-[clamp(2.5rem,5.2vw,4.75rem)] leading-[0.98] tracking-[-0.038em] text-ink [text-wrap:balance]">
-            Servicios de electricidad y fontanería en{" "}
+            Serveis d'electricitat i lampisteria a{" "}
             <span className="italic text-[#A4610E]">Girona</span>
           </h1>
 
           <p className="rise rise-2 mt-6 max-w-xl text-[15px] leading-7 text-muted sm:text-base sm:leading-8">
-            Soluciones para instalaciones, reparaciones y mantenimiento
-            eléctrico y de fontanería. Contacta con nosotros para consultar tu
-            necesidad y solicitar presupuesto.
+            Solucions per a instal·lacions, reparacions i manteniment
+            elèctric i de lampisteria. Contacta'ns per explicar-nos què
+            necessites i demanar pressupost.
           </p>
 
           <ul className="rise rise-2 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs font-bold text-ink/65">
-            {["Instalaciones", "Reparaciones", "Mantenimiento"].map((item) => (
+            {["Instal·lacions", "Reparacions", "Manteniment"].map((item) => (
               <li key={item} className="flex items-center gap-1.5">
                 <CheckIcon className="h-3.5 w-3.5 text-amber-deep" />
                 {item}
@@ -41,14 +41,14 @@ export default function Hero() {
           <div className="rise rise-3 mt-8 flex flex-col gap-3 sm:flex-row">
             <WhatsAppButton
               message={whatsappMessages.presupuesto}
-              label="Solicitar presupuesto"
+              label="Demanar pressupost"
             />
-            <PhoneButton label="Llamar ahora" />
+            <PhoneButton label="Truca ara" />
           </div>
 
           <p className="mt-4 flex items-center gap-2 text-xs font-semibold text-muted">
             <WhatsAppIcon className="h-4 w-4 text-[#1B6B4A]" />
-            Sin formularios: habla directamente con el negocio.
+            Sense formularis: parla directament amb el negoci.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export default function Hero() {
                 className="object-cover"
               />
               <div className="absolute left-0 top-5 bg-amber px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.2em] text-ink">
-                Electricidad · Fontanería
+                Electricitat · Lampisteria
               </div>
             </div>
 
@@ -77,10 +77,10 @@ export default function Hero() {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-display text-2xl leading-tight tracking-[-0.02em] text-ink">
-                    Dos oficios, un solo contacto
+                    Dos oficis, un sol contacte
                   </p>
                   <p className="mt-2 max-w-xs text-xs leading-6 text-muted">
-                    Electricidad y fontanería para tu vivienda o local en{" "}
+                    Electricitat i lampisteria per al teu habitatge o local a{" "}
                     {business.location.city}.
                   </p>
                 </div>
@@ -97,7 +97,7 @@ export default function Hero() {
                 href={business.contact.telHref}
                 className="mt-4 inline-flex items-center gap-2 text-xs font-extrabold text-ink underline decoration-amber underline-offset-4 transition-colors hover:text-[#A4610E]"
               >
-                Llamar al {business.contact.phoneDisplay}
+                Truca al {business.contact.phoneDisplay}
               </a>
             </div>
           </figure>
@@ -115,7 +115,7 @@ export default function Hero() {
           </div>
 
           <p className="mt-5 text-right text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
-            Imágenes de referencia del oficio.
+            Imatges de referència de l'ofici.
           </p>
         </div>
       </div>

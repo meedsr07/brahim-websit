@@ -24,15 +24,15 @@ import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Electricista en Girona | Reparaciones e instalaciones",
+  title: "Electricista a Girona | Reparacions i instal·lacions",
   description:
-    "Electricista en Girona para diagnóstico y reparación de averías, instalaciones y mantenimiento eléctrico. Consulta tu caso por WhatsApp o teléfono.",
+    "Electricista a Girona per a la diagnosi i reparació d'avaries, instal·lacions i manteniment elèctric. Consulta el teu cas per WhatsApp o telèfon.",
   path: "/electricidad",
 });
 
 const breadcrumbs = [
-  { name: "Inicio", path: "/" },
-  { name: "Electricidad", path: "/electricidad" },
+  { name: "Inici", path: "/" },
+  { name: "Electricitat", path: "/electricidad" },
 ];
 
 const signals = [
@@ -69,13 +69,13 @@ export default function ElectricidadPage() {
 
       <PageHero
         breadcrumbs={breadcrumbs}
-        eyebrow="Electricidad · Girona"
-        title="Electricista en Girona para averías, instalaciones y mantenimiento"
-        intro="Revisamos averías eléctricas, realizamos instalaciones y mantenimiento en Girona. Cuéntanos qué ocurre y te indicamos cómo podemos ayudarte."
+        eyebrow="Electricitat · Girona"
+        title="Electricista a Girona per a avaries, instal·lacions i manteniment"
+        intro="Revisem avaries elèctriques, fem instal·lacions i manteniment a Girona. Explica'ns què passa i t'indicarem com et podem ajudar."
         image={media.electricidadCableado.image}
         imageAlt={media.electricidadCableado.alt}
         message={whatsappMessages.electricidad}
-        bullets={["Diagnóstico de averías", "Instalaciones", "Mantenimiento"]}
+        bullets={["Diagnosi d'avaries", "Instal·lacions", "Manteniment"]}
       />
 
       <section className="bg-paper py-16 sm:py-20 lg:py-24">
@@ -83,29 +83,29 @@ export default function ElectricidadPage() {
           <ServiceSidebar
             message={whatsappMessages.electricidad}
             items={[
-              { label: "Averías", href: "#averias" },
-              { label: "Instalaciones", href: "#instalaciones" },
-              { label: "Mantenimiento", href: "#mantenimiento" },
-              { label: "Urgencias", href: "#urgencias" },
-              { label: "Señales de aviso", href: "#senales" },
-              { label: "Cómo pedirlo", href: "#proceso-servicio" },
-              { label: "Preguntas frecuentes", href: "#faq" },
+              { label: "Avaries", href: "#averias" },
+              { label: "Instal·lacions", href: "#instalaciones" },
+              { label: "Manteniment", href: "#mantenimiento" },
+              { label: "Urgències", href: "#urgencias" },
+              { label: "Senyals d'avís", href: "#senales" },
+              { label: "Com demanar-ho", href: "#proceso-servicio" },
+              { label: "Preguntes freqüents", href: "#faq" },
             ]}
           />
 
           <div>
             <div className="max-w-3xl">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber-deep">
-                Servicios eléctricos
+                Serveis elèctrics
               </p>
               <h2 className="mt-4 font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.02] tracking-[-0.03em] text-ink">
-                Qué podemos hacer por tu instalación
+                Què podem fer per la teva instal·lació
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted sm:text-base sm:leading-8">
-                Trabajamos sobre instalaciones eléctricas de viviendas y
-                locales. El primer paso es entender qué ocurre y qué necesita
-                la instalación; a partir de ahí planteamos la intervención y,
-                cuando corresponde, el presupuesto.
+                Treballem en instal·lacions elèctriques d'habitatges i locals.
+                El primer pas és entendre què passa i què necessita la
+                instal·lació; a partir d'aquí plantegem la intervenció i, si
+                escau, el pressupost.
               </p>
             </div>
 
@@ -117,12 +117,12 @@ export default function ElectricidadPage() {
 
             <div className="mt-10 flex flex-col gap-3 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
               <p className="max-w-md text-sm leading-7 text-muted">
-                ¿No sabes qué tipo de servicio necesitas? Descríbenos el
-                problema y te orientamos.
+                No saps quin servei necessites? Descriu-nos el problema i
+                t'orientarem.
               </p>
               <WhatsAppButton
                 message={whatsappMessages.electricidad}
-                label="Consultar mi caso"
+                label="Consulta el meu cas"
                 variant="dark"
               />
             </div>
@@ -139,7 +139,7 @@ export default function ElectricidadPage() {
           <div>
             <p className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber">
               <AlertIcon className="h-4 w-4" />
-              Urgencias eléctricas
+              Urgències elèctriques
             </p>
             <h2
               id="urgencias-title"
@@ -156,7 +156,7 @@ export default function ElectricidadPage() {
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton
                 message={electricalEmergency.message}
-                label="Consultar disponibilidad"
+                label="Consulta la disponibilitat"
                 variant="amber"
               />
               <a
@@ -164,14 +164,14 @@ export default function ElectricidadPage() {
                 className="inline-flex min-h-12 items-center justify-center gap-2.5 rounded-[2px] border border-cream/25 px-5 py-3 text-sm font-extrabold text-cream transition-colors hover:border-cream/60 hover:bg-white/[0.06]"
               >
                 <PhoneIcon className="h-[18px] w-[18px]" />
-                Llamar ahora
+                Truca ara
               </a>
             </div>
           </div>
 
           <div className="border border-cream/15 bg-white/[0.035] p-6 sm:p-8">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cream/50">
-              Antes de intervenir
+              Abans d'intervenir
             </p>
             <ul className="mt-4 space-y-4">
               {electricalEmergency.points.map((point) => (
@@ -185,8 +185,8 @@ export default function ElectricidadPage() {
               ))}
             </ul>
             <p className="mt-6 border-t border-cream/10 pt-4 text-xs leading-6 text-cream/45">
-              No publicamos tiempos de respuesta garantizados. La atención se
-              confirma en cada caso.
+              No publiquem temps de resposta garantits. L'atenció es confirma
+              en cada cas.
             </p>
           </div>
         </div>
@@ -201,19 +201,19 @@ export default function ElectricidadPage() {
           <div className="grid gap-6 lg:grid-cols-[1fr_0.75fr] lg:items-end">
             <div>
               <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber-deep">
-                Cuándo revisar la instalación
+                Quan cal revisar la instal·lació
               </p>
               <h2
                 id="senales-title"
                 className="mt-4 max-w-2xl font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.02] tracking-[-0.03em] text-ink"
               >
-                Señales de que necesitas un electricista
+                Senyals que necessites un electricista
               </h2>
             </div>
             <p className="max-w-md text-sm leading-7 text-muted lg:justify-self-end">
-              Algunas averías son evidentes; otras empiezan con pequeños
-              cambios. Si detectas una situación de riesgo, no esperes a que
-              empeore.
+              Algunes avaries són evidents; d'altres comencen amb petits
+              canvis. Si detectes una situació de risc, no esperis que
+              empitjori.
             </p>
           </div>
 
@@ -241,22 +241,22 @@ export default function ElectricidadPage() {
       </section>
 
       <SimpleProcess
-        title="Pedir un electricista en Girona, paso a paso"
-        intro="Cuéntanos el problema con el mayor detalle posible. Con esa información valoramos el caso y te indicamos el siguiente paso."
+        title="Demanar un electricista a Girona, pas a pas"
+        intro="Explica'ns el problema amb el màxim detall possible. Amb aquesta informació valorem el cas i t'indiquem el pas següent."
         message={whatsappMessages.electricidad}
-        cta="Consultar mi avería"
+        cta="Consulta la meva avaria"
         steps={[
           {
-            title: "Describe la avería",
-            text: "Indica qué no funciona, desde cuándo y en qué zona de Girona estás. Una foto del cuadro o del punto afectado ayuda a entender el caso.",
+            title: "Descriu l'avaria",
+            text: "Indica què no funciona, des de quan i a quina zona de Girona ets. Una foto del quadre o del punt afectat ajuda a entendre el cas.",
           },
           {
-            title: "Valoramos la instalación",
-            text: "Revisamos la información y te preguntamos lo necesario para entender el origen y el alcance de la intervención.",
+            title: "Valorem la instal·lació",
+            text: "Revisem la informació i et preguntem el necessari per entendre l'origen i l'abast de la intervenció.",
           },
           {
-            title: "Acordamos la intervención",
-            text: "Te explicamos las opciones y, si corresponde, preparamos un presupuesto antes de realizar la reparación.",
+            title: "Acordem la intervenció",
+            text: "T'expliquem les opcions i, si escau, preparem un pressupost abans de fer la reparació.",
           },
         ]}
       />
@@ -264,28 +264,28 @@ export default function ElectricidadPage() {
       <section className="border-b border-line bg-paper py-8">
         <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-4 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
           <p className="text-sm text-muted">
-            ¿Tu necesidad es de fontanería? También trabajamos reparaciones,
-            fugas e instalaciones de agua.
+            Necessites lampisteria? També fem reparacions, fuites i
+            instal·lacions d'aigua.
           </p>
           <Link
             href="/fontaneria"
             className="group inline-flex items-center gap-2 text-sm font-extrabold text-ink transition-colors hover:text-amber-deep"
           >
-            Ver servicios de fontanería
+            Veure serveis de lampisteria
             <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
       </section>
 
       <FAQ
-        title="Preguntas frecuentes sobre electricidad"
-        intro="Dudas habituales antes de solicitar un servicio eléctrico en Girona. Si tu caso es distinto, escríbenos."
+        title="Preguntes freqüents sobre electricitat"
+        intro="Dubtes habituals abans de demanar un servei elèctric a Girona. Si el teu cas és diferent, escriu-nos."
         items={electricalFaqs}
       />
 
       <FinalCTA
-        title="¿Tienes una avería eléctrica en Girona?"
-        text="Cuéntanos qué ocurre, desde cuándo y en qué zona estás. Te indicamos cómo podemos ayudarte y qué siguiente paso tiene sentido."
+        title="Tens una avaria elèctrica a Girona?"
+        text="Explica'ns què passa, des de quan i a quina zona ets. T'indicarem com et podem ajudar i quin pas següent té sentit."
         message={whatsappMessages.electricidad}
       />
     </>
