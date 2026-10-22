@@ -1,26 +1,31 @@
 import { business } from "@/lib/business";
-import { BoltIcon, DropletIcon, MapPinIcon, WhatsAppIcon } from "./Icons";
+import {
+  BoltIcon,
+  CheckIcon,
+  ClockIcon,
+  DropletIcon,
+} from "./Icons";
 
 const items = [
   {
-    icon: BoltIcon,
-    title: "Electricitat",
-    text: "Avaries, instal·lacions i manteniment",
+    icon: ClockIcon,
+    title: "Urgències 24/7",
+    text: "Nits, festius i caps de setmana",
   },
   {
     icon: DropletIcon,
-    title: "Lampisteria",
-    text: "Reparacions, fuites i instal·lacions",
+    title: "Lampisteria Girona",
+    text: "Fuites, reparacions i instal·lacions",
   },
   {
-    icon: MapPinIcon,
-    title: business.location.city,
-    text: "Zona de referència del servei",
+    icon: BoltIcon,
+    title: "Electricista Girona",
+    text: "Avaries, instal·lacions i manteniment",
   },
   {
-    icon: WhatsAppIcon,
-    title: "Contacte directe",
-    text: "WhatsApp i telèfon",
+    icon: CheckIcon,
+    title: "Preus econòmics",
+    text: `Pressupost sense compromís · ${business.location.city}`,
   },
 ];
 

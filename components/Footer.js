@@ -7,6 +7,7 @@ import {
 import Logo from "./Logo";
 import {
   ArrowUpRightIcon,
+  ClockIcon,
   MapPinIcon,
   PhoneIcon,
   WhatsAppIcon,
@@ -28,13 +29,20 @@ export default function Footer() {
               <Logo tone="light" />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-7 text-cream/65">
-              Serveis d'electricitat i lampisteria a Girona. Instal·lacions,
-              reparacions i manteniment amb contacte directe.
+              Lampisteria i electricitat d'urgència a Girona 24/7.
+              Reparacions, instal·lacions i manteniment amb contacte directe
+              i preus econòmics.
             </p>
-            <p className="mt-5 flex items-start gap-2.5 text-sm font-semibold text-cream/80">
+            <address className="mt-5 flex items-start gap-2.5 text-sm font-semibold not-italic text-cream/80">
               <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-amber" />
-              {business.location.city}, {business.location.region}
-            </p>
+              <span>
+                <span className="block text-cream">{business.name}</span>
+                {business.location.city}, {business.location.region}
+                <span className="mt-1 block text-xs font-normal text-cream/50">
+                  {business.hours.display}
+                </span>
+              </span>
+            </address>
           </div>
 
           <nav aria-label="Serveis">
@@ -103,9 +111,14 @@ export default function Footer() {
                   {business.contact.phoneDisplay}
                 </a>
               </li>
+              <li className="inline-flex items-center gap-2.5 text-cream/70">
+                <ClockIcon className="h-4 w-4 text-amber" />
+                {business.hours.display}
+              </li>
               <li className="pt-1 text-xs leading-6 text-cream/45">
-                Horari d'atenció: consulta la disponibilitat per WhatsApp o
-                telèfon.
+                Urgències de lampisteria i electricitat a Girona, també en
+                festius. El temps d'arribada es confirma segons la zona i el
+                moment.
               </li>
             </ul>
           </div>
@@ -120,6 +133,8 @@ export default function Footer() {
               <span className="text-cream/45">
                 Consulta altres poblacions segons disponibilitat.
               </span>
+              <br />
+              <span className="text-cream/45">{business.priceRangeLabel}.</span>
             </p>
             <Link
               href="/contacto"
@@ -133,9 +148,9 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-cream/10 pt-6">
           <p className="max-w-2xl text-xs leading-6 text-cream/40">
-            El servei d'urgències elèctriques està subjecte a disponibilitat
-            confirmada. Els serveis, l'abast i el pressupost es concreten en
-            valorar cada cas.
+            Atenem urgències de lampisteria i electricitat a Girona 24/7. El
+            temps d'arribada es confirma segons la zona i el moment. Els
+            serveis, l'abast i el pressupost es concreten en valorar cada cas.
           </p>
           <div className="mt-5 flex flex-col gap-3 text-[11px] leading-5 text-cream/35 sm:flex-row sm:items-center sm:justify-between">
             <p>

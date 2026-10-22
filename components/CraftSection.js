@@ -52,7 +52,7 @@ export default function CraftSection() {
             id="oficio-title"
             className="mt-4 font-display text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.02] tracking-[-0.03em] text-ink"
           >
-            El detall importa tant com el resultat
+            Electricitat i lampisteria a Girona, fetes amb detall
           </h2>
           <p className="mt-5 text-sm leading-7 text-muted sm:text-base sm:leading-8">
             Una instal·lació ben resolta ha de ser segura, funcional i fàcil de

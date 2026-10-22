@@ -32,7 +32,8 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="ca"
+      lang="ca-ES"
+      dir="ltr"
       className={`${manrope.variable} ${fraunces.variable} h-full`}
       data-scroll-behavior="smooth"
     >

@@ -7,7 +7,7 @@ import SimpleProcess from "@/components/SimpleProcess";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import JsonLd from "@/components/JsonLd";
-import { WhatsAppButton } from "@/components/Buttons";
+import { PhoneButton, WhatsAppButton } from "@/components/Buttons";
 import {
   AlertIcon,
   ArrowRightIcon,
@@ -22,12 +22,20 @@ import {
 import { media } from "@/lib/media";
 import { whatsappMessages } from "@/lib/business";
 import { buildMetadata } from "@/lib/seo";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Lampista a Girona | Reparacions i fuites d'aigua",
+  title: "Lampista Girona 24/7 | Urgències de lampisteria i fuites",
   description:
-    "Lampista a Girona per reparar aixetes, cisternes, desguassos i fuites d'aigua, a més d'instal·lacions i manteniment. Consulta el teu cas per WhatsApp.",
+    "Lampista d'urgència a Girona 24/7 per a fuites, aixetes, cisternes i desguassos. Reparacions ràpides i preus econòmics. Truca ara o escriu per WhatsApp.",
+  path: "/fontaneria",
+});
+
+const plumbingServiceSchema = serviceSchema({
+  name: "Lampista d'urgència a Girona 24/7",
+  description:
+    "Reparacions de lampisteria, fuites d'aigua, instal·lacions i manteniment a Girona, amb atenció d'urgències 24/7.",
+  serviceType: "Lampisteria i instal·lacions d'aigua",
   path: "/fontaneria",
 });
 
@@ -40,16 +48,17 @@ export default function FontaneriaPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
+      <JsonLd data={plumbingServiceSchema} />
 
       <PageHero
         breadcrumbs={breadcrumbs}
-        eyebrow="Lampisteria · Girona"
-        title="Lampista a Girona per a reparacions, fuites i instal·lacions"
-        intro="Reparem problemes de lampisteria, valorem fuites i humitats, i instal·lem components d'aigua. Explica'ns què passa i t'indicarem com et podem ajudar."
+        eyebrow="Lampista Girona · 24/7"
+        title="Lampista d'urgència a Girona 24/7: fuites, reparacions i instal·lacions"
+        intro="Tens una fuita, una aixeta que goteja o una cisterna que no para? Atenem lampisteria d'urgència a Girona 24/7, amb preus econòmics i pressupost abans d'intervenir."
         image={media.fontaneriaBano.image}
         imageAlt={media.fontaneriaBano.alt}
         message={whatsappMessages.fontaneria}
-        bullets={["Reparacions", "Fuites i humitats", "Instal·lacions"]}
+        bullets={["Urgències 24/7", "Fuites i humitats", "Reparacions", "Instal·lacions"]}
       />
 
       <section className="bg-paper py-16 sm:py-20 lg:py-24">
@@ -73,12 +82,12 @@ export default function FontaneriaPage() {
                 Serveis de lampisteria
               </p>
               <h2 className="mt-4 font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.02] tracking-[-0.03em] text-ink">
-                Solucions per a l'aigua del teu habitatge o local
+                Serveis de lampisteria a Girona per a habitatges i locals
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted sm:text-base sm:leading-8">
                 Des d'una cisterna que no para fins a una instal·lació que cal
                 renovar. Revisem el punt afectat, expliquem les opcions i
-                acordem l'abast abans d'intervenir.
+                acordem l'abast abans d'intervenir, amb un pressupost clar.
               </p>
             </div>
 
@@ -118,7 +127,7 @@ export default function FontaneriaPage() {
                 id="problemas-title"
                 className="mt-4 max-w-2xl font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.02] tracking-[-0.03em] text-ink"
               >
-                Problemes habituals de lampisteria
+                Problemes habituals de lampisteria a Girona
               </h2>
             </div>
             <p className="max-w-md text-sm leading-7 text-muted lg:justify-self-end">
@@ -161,18 +170,19 @@ export default function FontaneriaPage() {
           <div>
             <p className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber">
               <AlertIcon className="h-4 w-4" />
-              Fuites d'aigua
+              Lampisteria d'urgència · 24/7
             </p>
             <h2
               id="fuga-title"
               className="mt-4 max-w-2xl font-display text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.02] tracking-[-0.03em] text-cream"
             >
-              Què cal fer mentre esperes una revisió
+              Lampisteria d'urgència a Girona: què fer davant una fuita
             </h2>
             <p className="mt-5 max-w-xl text-sm leading-7 text-cream/65 sm:text-base sm:leading-8">
               Davant d'una fuita visible, el primer és reduir el risc i evitar
               que l'aigua continuï avançant. Si no ho pots fer amb seguretat,
-              no forcis res i busca ajuda.
+              no forcis res i truca'ns: atenem urgències de lampisteria a
+              Girona 24/7.
             </p>
 
             <ul className="mt-7 space-y-4">
@@ -198,12 +208,14 @@ export default function FontaneriaPage() {
               d'emergència si cal.
             </p>
 
-            <WhatsAppButton
-              message={whatsappMessages.fontaneriaFuga}
-              label="Consulta una fuita"
-              variant="amber"
-              className="mt-7"
-            />
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <PhoneButton label="Truca ara · 24/7" variant="amber" />
+              <WhatsAppButton
+                message={whatsappMessages.fontaneriaFuga}
+                label="WhatsApp 24/7"
+                variant="lightOutline"
+              />
+            </div>
           </div>
 
           <figure>
@@ -224,8 +236,8 @@ export default function FontaneriaPage() {
       </section>
 
       <SimpleProcess
-        title="Demanar un lampista a Girona, pas a pas"
-        intro="Explica'ns quin element falla i què has observat. Si pots, indica la marca o el model i envia una foto del punt afectat."
+        title="Demanar un lampista d'urgència a Girona, pas a pas"
+        intro="Explica'ns quin element falla i què has observat. Atenem consultes 24/7; si pots, indica la marca o el model i envia una foto del punt afectat."
         message={whatsappMessages.fontaneria}
         cta="Consulta la meva reparació"
         steps={[
@@ -261,14 +273,14 @@ export default function FontaneriaPage() {
       </section>
 
       <FAQ
-        title="Preguntes freqüents sobre lampisteria"
-        intro="Respostes sobre fuites, reparacions, instal·lacions i manteniment. Si el teu problema no hi és, explica'ns-el."
+        title="Preguntes freqüents sobre lampisteria a Girona 24/7"
+        intro="Respostes sobre fuites, reparacions, instal·lacions i manteniment. Si el teu problema no hi és, explica'ns-el o truca'ns."
         items={plumbingFaqs}
       />
 
       <FinalCTA
-        title="Necessites un lampista a Girona?"
-        text="Explica'ns què passa amb l'aigua del teu habitatge o local. T'indicarem com et podem ajudar i quin pas següent té sentit."
+        title="Necessites un lampista d'urgència a Girona?"
+        text="Truca'ns o escriu-nos les 24 hores. Explica'ns què passa amb l'aigua del teu habitatge o local i t'indicarem com et podem ajudar."
         message={whatsappMessages.fontaneria}
       />
     </>

@@ -8,15 +8,15 @@ import ProjectGallery from "@/components/ProjectGallery";
 import FAQ from "@/components/FAQ";
 import ServiceArea from "@/components/ServiceArea";
 import FinalCTA from "@/components/FinalCTA";
+import LocalSeoContent from "@/components/LocalSeoContent";
 import { homeFaqs } from "@/lib/content";
 import { media } from "@/lib/media";
-import { buildMetadata } from "@/lib/seo";
+import { primarySeo, buildMetadata } from "@/lib/seo";
 import { whatsappMessages } from "@/lib/business";
 
 export const metadata = buildMetadata({
-  title: "Electricitat i lampisteria a Girona | Serveis",
-  description:
-    "Serveis d'electricitat i lampisteria a Girona: avaries, instal·lacions i manteniment. Contacta per WhatsApp o telèfon i demana pressupost.",
+  title: primarySeo.title,
+  description: primarySeo.description,
   path: "/",
 });
 
@@ -41,11 +41,11 @@ export default function HomePage() {
                 id="servicios-title"
                 className="mt-4 max-w-2xl font-display text-[clamp(2.2rem,4.4vw,3.9rem)] leading-[1.01] tracking-[-0.032em] text-ink"
               >
-                Electricitat i lampisteria per al teu habitatge o local
+                Lampisteria i electricitat d'urgència a Girona 24/7
               </h2>
             </div>
             <p className="max-w-md text-sm leading-7 text-muted lg:justify-self-end lg:pb-1">
-              Cobrim les necessitats habituals de totes dues especialitats.
+              Avaries elèctriques, fuites, reparacions i instal·lacions.
               Tria el servei que necessites o escriu-nos si no tens clar on
               és el problema.
             </p>
@@ -54,14 +54,14 @@ export default function HomePage() {
 
         <ServiceSection
           number="01"
-          eyebrow="Electricitat"
-          title="Avaries, instal·lacions i manteniment elèctric"
-          description="Revisem l'origen de l'avaria, plantegem la reparació i valorem l'estat general de la instal·lació. També fem instal·lacions noves i tasques de manteniment."
+          eyebrow="Electricista Girona · 24/7"
+          title="Electricista d'urgència a Girona: avaries, instal·lacions i manteniment"
+          description="Revisem l'origen de l'avaria, plantegem la reparació i valorem l'estat general de la instal·lació. També fem instal·lacions elèctriques a Girona i tasques de manteniment."
           bullets={[
             "Diagnosi i reparació d'avaries elèctriques.",
             "Instal·lacions elèctriques i posades a punt.",
             "Manteniment i revisió de la instal·lació.",
-            "Urgències elèctriques, segons disponibilitat.",
+            "Urgències elèctriques 24/7 a Girona.",
           ]}
           href="/electricidad"
           linkLabel="Veure serveis d'electricitat"
@@ -73,14 +73,14 @@ export default function HomePage() {
 
         <ServiceSection
           number="02"
-          eyebrow="Lampisteria"
-          title="Reparacions, fuites i instal·lacions de lampisteria"
-          description="Atenem problemes de lampisteria en aixetes, cisternes, desguassos i sanitaris. Valorem les fuites i les humitats, i fem instal·lacions i substitucions de components."
+          eyebrow="Lampista Girona · 24/7"
+          title="Lampista d'urgència a Girona: fuites, aixetes i instal·lacions"
+          description="Atenem problemes de lampisteria a Girona en aixetes, cisternes, desguassos i sanitaris. Valorem les fuites i les humitats, i fem instal·lacions i substitucions de components."
           bullets={[
             "Reparació d'aixetes, cisternes, desguassos i sanitaris.",
             "Fuites d'aigua i humitats, segons valoració.",
             "Instal·lacions i substitucions de lampisteria.",
-            "Manteniment dels punts d'aigua.",
+            "Urgències de lampisteria 24/7 a Girona.",
           ]}
           href="/fontaneria"
           linkLabel="Veure serveis de lampisteria"
@@ -92,19 +92,21 @@ export default function HomePage() {
         />
       </section>
 
+      <LocalSeoContent />
+
       <ReasonsSection />
       <ProcessSection />
       <CraftSection />
       <ProjectGallery />
       <FAQ
-        title="Preguntes freqüents sobre electricitat i lampisteria"
-        intro="Respostes clares sobre serveis, pressupostos, zona de treball i urgències. Si no hi trobes el teu dubte, escriu-nos."
+        title="Preguntes freqüents sobre lampisteria i electricitat a Girona 24/7"
+        intro="Respostes clares sobre serveis, preus, zona de treball i urgències. Si no hi trobes el teu dubte, escriu-nos o truca'ns."
         items={homeFaqs}
       />
       <ServiceArea />
       <FinalCTA
-        title="Necessites un electricista o un lampista a Girona?"
-        text="Explica'ns què passa i t'indicarem com et podem ajudar. Pots escriure'ns per WhatsApp o trucar-nos per consultar el teu cas i demanar pressupost."
+        title="Necessites un lampista o electricista d'urgència a Girona?"
+        text="Truca'ns o escriu-nos les 24 hores. Explica'ns què passa i t'indicarem com et podem ajudar, amb pressupost clar i preus econòmics."
         message={whatsappMessages.presupuesto}
       />
     </>

@@ -18,11 +18,11 @@ export default function ProcessSection() {
             id="proceso-title"
             className="mt-4 max-w-md font-display text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.03] tracking-[-0.03em] text-ink"
           >
-            Demanar ajuda és senzill
+            Demanar ajuda a Girona és senzill
           </h2>
           <p className="mt-5 max-w-sm text-sm leading-7 text-muted">
             No hi ha formularis ni intermediaris. Explica'ns el cas per
-            WhatsApp o telèfon i t'indicarem el pas següent.
+            WhatsApp o telèfon, a qualsevol hora, i t'indicarem el pas següent.
           </p>
           <WhatsAppButton
             message={whatsappMessages.general}

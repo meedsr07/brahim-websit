@@ -115,7 +115,9 @@ export default function Header() {
               </span>
             </p>
             <div className="flex items-center gap-5">
-              <span className="text-cream/55">Electricitat i lampisteria</span>
+              <span className="text-cream/55">
+                Atenció 24/7 · Lampisteria i electricitat
+              </span>
               <a
                 href={business.contact.telHref}
                 className="inline-flex items-center gap-2 text-cream transition-colors hover:text-amber"
@@ -146,7 +148,7 @@ export default function Header() {
             >
               {business.navigation.map((item) => {
                 const active =
-                  item.href !== "/#proceso" && pathname === item.href;
+                  !item.href.includes("#") && pathname === item.href;
                 return (
                   <Link
                     key={item.href}
@@ -249,7 +251,7 @@ export default function Header() {
             <ul className="divide-y divide-line">
               {business.navigation.map((item) => {
                 const active =
-                  item.href !== "/#proceso" && pathname === item.href;
+                  !item.href.includes("#") && pathname === item.href;
                 return (
                   <li key={item.href}>
                     <Link
@@ -274,7 +276,7 @@ export default function Header() {
           <div className="mt-6 grid gap-3">
             <WhatsAppButton
               message={whatsappMessages.general}
-              label="Consulta per WhatsApp"
+              label="Urgència per WhatsApp 24/7"
               variant="green"
               className="w-full"
             />

@@ -1,7 +1,7 @@
 import { homeReasons } from "@/lib/content";
 import { TextLink } from "./Buttons";
 import {
-  ChatIcon,
+  ClockIcon,
   ClipboardIcon,
   CombineIcon,
   MapPinIcon,
@@ -10,7 +10,7 @@ import {
 const icons = {
   combine: CombineIcon,
   pin: MapPinIcon,
-  chat: ChatIcon,
+  clock: ClockIcon,
   clipboard: ClipboardIcon,
 };
 
@@ -33,11 +33,11 @@ export default function ReasonsSection() {
             id="motius-title"
             className="mt-4 max-w-md font-display text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.02] tracking-[-0.03em] text-cream"
           >
-            Una manera directa de resoldre-ho
+            Lampisteria i electricitat a Girona, sense intermediaris
           </h2>
           <p className="mt-5 max-w-sm text-sm leading-7 text-cream/60">
-            Sense promeses que no puguem complir. La informació d'aquest web es
-            limita als serveis i al contacte que el negoci pot confirmar.
+            Atenció 24/7, contacte directe i pressupost clar. Si el teu cas
+            necessita una valoració prèvia, t'ho diem abans d'intervenir.
           </p>
           <TextLink href="/contacto" tone="light" className="mt-7">
             Veure com contactar

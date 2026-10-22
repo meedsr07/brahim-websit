@@ -2,7 +2,13 @@ import Image from "next/image";
 import { business, whatsappMessages } from "@/lib/business";
 import { media } from "@/lib/media";
 import { PhoneButton, WhatsAppButton } from "./Buttons";
-import { BoltIcon, CheckIcon, DropletIcon, WhatsAppIcon } from "./Icons";
+import {
+  BoltIcon,
+  CheckIcon,
+  DropletIcon,
+  PhoneIcon,
+  WhatsAppIcon,
+} from "./Icons";
 
 export default function Hero() {
   return (
@@ -15,22 +21,29 @@ export default function Hero() {
         <div className="max-w-2xl">
           <p className="rise flex items-center gap-3 text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber-deep">
             <span className="h-px w-8 bg-amber-deep" aria-hidden="true" />
-            {business.location.city} · Electricitat i lampisteria
+            {business.location.city} · Lampisteria i electricitat{" "}
+            {business.hours.short}
           </p>
 
           <h1 className="rise rise-1 mt-5 font-display text-[clamp(2.5rem,5.2vw,4.75rem)] leading-[0.98] tracking-[-0.038em] text-ink [text-wrap:balance]">
-            Serveis d'electricitat i lampisteria a{" "}
-            <span className="italic text-[#A4610E]">Girona</span>
+            Lampisteria i electricitat d'urgència a{" "}
+            <span className="italic text-[#A4610E]">Girona</span>, 24/7, amb
+            resposta ràpida i bon preu
           </h1>
 
           <p className="rise rise-2 mt-6 max-w-xl text-[15px] leading-7 text-muted sm:text-base sm:leading-8">
-            Solucions per a instal·lacions, reparacions i manteniment
-            elèctric i de lampisteria. Contacta'ns per explicar-nos què
-            necessites i demanar pressupost.
+            Tens una fuita, una avaria elèctrica o necessites una instal·lació?
+            A Girona atenem urgències de lampisteria i electricitat les 24
+            hores, els 7 dies, amb pressupost clar i preus econòmics.
           </p>
 
           <ul className="rise rise-2 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs font-bold text-ink/65">
-            {["Instal·lacions", "Reparacions", "Manteniment"].map((item) => (
+            {[
+              "Urgències 24/7",
+              "Lampisteria i electricitat",
+              "Preus econòmics",
+              "Pressupost sense compromís",
+            ].map((item) => (
               <li key={item} className="flex items-center gap-1.5">
                 <CheckIcon className="h-3.5 w-3.5 text-amber-deep" />
                 {item}
@@ -39,16 +52,29 @@ export default function Hero() {
           </ul>
 
           <div className="rise rise-3 mt-8 flex flex-col gap-3 sm:flex-row">
+            <PhoneButton label="Truca ara · 24/7" variant="amber" />
             <WhatsAppButton
-              message={whatsappMessages.presupuesto}
-              label="Demanar pressupost"
+              message={whatsappMessages.general}
+              label="WhatsApp 24/7"
+              variant="outline"
             />
-            <PhoneButton label="Truca ara" />
           </div>
 
-          <p className="mt-4 flex items-center gap-2 text-xs font-semibold text-muted">
-            <WhatsAppIcon className="h-4 w-4 text-[#1B6B4A]" />
-            Sense formularis: parla directament amb el negoci.
+          <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-semibold text-muted">
+            <PhoneIcon className="h-4 w-4 text-amber-deep" />
+            <a
+              href={business.contact.telHref}
+              className="font-extrabold text-ink underline decoration-amber underline-offset-4"
+            >
+              {business.contact.phoneDisplay}
+            </a>
+            <span aria-hidden="true">·</span>
+            <span>{business.hours.display}</span>
+            <span aria-hidden="true">·</span>
+            <span className="inline-flex items-center gap-1.5">
+              <WhatsAppIcon className="h-4 w-4 text-[#1B6B4A]" />
+              Sense formularis
+            </span>
           </p>
         </div>
 
@@ -69,7 +95,7 @@ export default function Hero() {
                 className="object-cover"
               />
               <div className="absolute left-0 top-5 bg-amber px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.2em] text-ink">
-                Electricitat · Lampisteria
+                Electricitat · Lampisteria · 24/7
               </div>
             </div>
 
@@ -80,8 +106,8 @@ export default function Hero() {
                     Dos oficis, un sol contacte
                   </p>
                   <p className="mt-2 max-w-xs text-xs leading-6 text-muted">
-                    Electricitat i lampisteria per al teu habitatge o local a{" "}
-                    {business.location.city}.
+                    Lampista i electricista d'urgència per al teu habitatge o
+                    local a {business.location.city}, les 24 hores.
                   </p>
                 </div>
                 <div className="hidden shrink-0 gap-2 sm:flex">

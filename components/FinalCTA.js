@@ -7,8 +7,8 @@ import { PhoneButton, WhatsAppButton } from "./Buttons";
 import { MapPinIcon, PhoneIcon, WhatsAppIcon } from "./Icons";
 
 export default function FinalCTA({
-  title = "¿Necesitas resolver algo en casa?",
-  text = "Cuéntanos qué ocurre y te indicamos cómo podemos ayudarte. Puedes escribirnos por WhatsApp o llamarnos; no hay formularios ni pasos innecesarios.",
+  title = "Necessites resoldre una urgència a Girona?",
+  text = "Explica'ns què passa i t'indicarem com et podem ajudar. Pots escriure'ns per WhatsApp o trucar-nos; no hi ha formularis ni passos innecessaris.",
   message = whatsappMessages.presupuesto,
 }) {
   return (
@@ -32,7 +32,7 @@ export default function FinalCTA({
       <div className="mx-auto grid w-full max-w-[1240px] gap-10 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20 lg:px-10">
         <div>
           <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber">
-            Hablemos de tu caso
+            Parlem del teu cas · 24/7
           </p>
           <h2
             id="cta-final-title"
@@ -46,22 +46,23 @@ export default function FinalCTA({
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <WhatsAppButton
               message={message}
-              label="Solicitar presupuesto"
+              label="Demanar pressupost"
               variant="amber"
             />
             <PhoneButton
-              label="Llamar ahora"
+              label="Truca ara · 24/7"
               variant="lightOutline"
             />
           </div>
           <p className="mt-4 text-xs leading-6 text-cream/40">
-            Sin formularios. La conversación se realiza por WhatsApp o teléfono.
+            Sense formularis. La conversa es fa per WhatsApp o telèfon, les 24
+            hores.
           </p>
         </div>
 
         <div className="border border-cream/15 bg-white/[0.035] p-6 sm:p-7">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-cream/45">
-            Contacto directo
+            Contacte directe
           </p>
           <ul className="mt-5 space-y-5">
             <li>
@@ -79,7 +80,7 @@ export default function FinalCTA({
                     WhatsApp
                   </span>
                   <span className="mt-0.5 block text-xs leading-5 text-cream/50">
-                    Abre una conversación con el negocio
+                    Obre una conversa amb el negoci
                   </span>
                 </span>
               </a>
@@ -97,7 +98,7 @@ export default function FinalCTA({
                     {business.contact.phoneDisplay}
                   </span>
                   <span className="mt-0.5 block text-xs leading-5 text-cream/50">
-                    Llamada directa
+                    Trucada directa · 24/7
                   </span>
                 </span>
               </a>
@@ -111,7 +112,7 @@ export default function FinalCTA({
                   {business.location.city}
                 </span>
                 <span className="mt-0.5 block text-xs leading-5 text-cream/50">
-                  Zona de referencia. Consulta otras localidades.
+                  Zona de referència. Consulta altres poblacions.
                 </span>
               </span>
             </li>

@@ -21,12 +21,20 @@ import {
 import { media } from "@/lib/media";
 import { business, whatsappMessages } from "@/lib/business";
 import { buildMetadata } from "@/lib/seo";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Electricista a Girona | Reparacions i instal·lacions",
+  title: "Electricista Girona 24/7 | Urgències i instal·lacions",
   description:
-    "Electricista a Girona per a la diagnosi i reparació d'avaries, instal·lacions i manteniment elèctric. Consulta el teu cas per WhatsApp o telèfon.",
+    "Electricista d'urgència a Girona 24/7. Avaries elèctriques, instal·lacions i manteniment amb preus econòmics. Truca ara o escriu per WhatsApp.",
+  path: "/electricidad",
+});
+
+const electricityServiceSchema = serviceSchema({
+  name: "Electricista d'urgència a Girona 24/7",
+  description:
+    "Diagnosi i reparació d'avaries elèctriques, instal·lacions elèctriques i manteniment a Girona, amb atenció d'urgències 24/7.",
+  serviceType: "Electricitat i instal·lacions elèctriques",
   path: "/electricidad",
 });
 
@@ -66,16 +74,17 @@ export default function ElectricidadPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
+      <JsonLd data={electricityServiceSchema} />
 
       <PageHero
         breadcrumbs={breadcrumbs}
-        eyebrow="Electricitat · Girona"
-        title="Electricista a Girona per a avaries, instal·lacions i manteniment"
-        intro="Revisem avaries elèctriques, fem instal·lacions i manteniment a Girona. Explica'ns què passa i t'indicarem com et podem ajudar."
+        eyebrow="Electricista Girona · 24/7"
+        title="Electricista d'urgència a Girona 24/7: avaries, instal·lacions i manteniment"
+        intro="Tens una avaria elèctrica o necessites una instal·lació a Girona? Atenem urgències 24/7, amb diagnosi clara, preus econòmics i pressupost abans d'intervenir."
         image={media.electricidadCableado.image}
         imageAlt={media.electricidadCableado.alt}
         message={whatsappMessages.electricidad}
-        bullets={["Diagnosi d'avaries", "Instal·lacions", "Manteniment"]}
+        bullets={["Urgències 24/7", "Diagnosi d'avaries", "Instal·lacions", "Manteniment"]}
       />
 
       <section className="bg-paper py-16 sm:py-20 lg:py-24">
@@ -99,13 +108,13 @@ export default function ElectricidadPage() {
                 Serveis elèctrics
               </p>
               <h2 className="mt-4 font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.02] tracking-[-0.03em] text-ink">
-                Què podem fer per la teva instal·lació
+                Serveis d'electricitat a Girona per a habitatges i locals
               </h2>
               <p className="mt-5 text-sm leading-7 text-muted sm:text-base sm:leading-8">
-                Treballem en instal·lacions elèctriques d'habitatges i locals.
-                El primer pas és entendre què passa i què necessita la
-                instal·lació; a partir d'aquí plantegem la intervenció i, si
-                escau, el pressupost.
+                Treballem en instal·lacions elèctriques d'habitatges i locals a
+                Girona, a més d'avaries i manteniment. El primer pas és
+                entendre què passa i què necessita la instal·lació; a partir
+                d'aquí plantegem la intervenció i, si escau, el pressupost.
               </p>
             </div>
 
@@ -139,7 +148,7 @@ export default function ElectricidadPage() {
           <div>
             <p className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-amber">
               <AlertIcon className="h-4 w-4" />
-              Urgències elèctriques
+              Urgències elèctriques · 24/7
             </p>
             <h2
               id="urgencias-title"
@@ -156,7 +165,7 @@ export default function ElectricidadPage() {
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton
                 message={electricalEmergency.message}
-                label="Consulta la disponibilitat"
+                label="WhatsApp 24/7"
                 variant="amber"
               />
               <a
@@ -164,7 +173,7 @@ export default function ElectricidadPage() {
                 className="inline-flex min-h-12 items-center justify-center gap-2.5 rounded-[2px] border border-cream/25 px-5 py-3 text-sm font-extrabold text-cream transition-colors hover:border-cream/60 hover:bg-white/[0.06]"
               >
                 <PhoneIcon className="h-[18px] w-[18px]" />
-                Truca ara
+                Truca ara · 24/7
               </a>
             </div>
           </div>
@@ -185,8 +194,8 @@ export default function ElectricidadPage() {
               ))}
             </ul>
             <p className="mt-6 border-t border-cream/10 pt-4 text-xs leading-6 text-cream/45">
-              No publiquem temps de resposta garantits. L'atenció es confirma
-              en cada cas.
+              El temps d'arribada es confirma en cada cas, segons la zona i el
+              moment. Si hi ha risc per a les persones, truca primer al 112.
             </p>
           </div>
         </div>
@@ -207,7 +216,7 @@ export default function ElectricidadPage() {
                 id="senales-title"
                 className="mt-4 max-w-2xl font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.02] tracking-[-0.03em] text-ink"
               >
-                Senyals que necessites un electricista
+                Senyals que necessites un electricista d'urgència a Girona
               </h2>
             </div>
             <p className="max-w-md text-sm leading-7 text-muted lg:justify-self-end">
@@ -241,8 +250,8 @@ export default function ElectricidadPage() {
       </section>
 
       <SimpleProcess
-        title="Demanar un electricista a Girona, pas a pas"
-        intro="Explica'ns el problema amb el màxim detall possible. Amb aquesta informació valorem el cas i t'indiquem el pas següent."
+        title="Demanar un electricista d'urgència a Girona, pas a pas"
+        intro="Explica'ns el problema amb el màxim detall possible. Atenem consultes 24/7 i, amb aquesta informació, valorem el cas i t'indiquem el pas següent."
         message={whatsappMessages.electricidad}
         cta="Consulta la meva avaria"
         steps={[
@@ -278,14 +287,14 @@ export default function ElectricidadPage() {
       </section>
 
       <FAQ
-        title="Preguntes freqüents sobre electricitat"
-        intro="Dubtes habituals abans de demanar un servei elèctric a Girona. Si el teu cas és diferent, escriu-nos."
+        title="Preguntes freqüents sobre electricitat a Girona 24/7"
+        intro="Dubtes habituals abans de demanar un electricista a Girona. Si el teu cas és diferent, escriu-nos o truca'ns."
         items={electricalFaqs}
       />
 
       <FinalCTA
-        title="Tens una avaria elèctrica a Girona?"
-        text="Explica'ns què passa, des de quan i a quina zona ets. T'indicarem com et podem ajudar i quin pas següent té sentit."
+        title="Tens una avaria elèctrica urgent a Girona?"
+        text="Truca'ns o escriu-nos les 24 hores. Explica'ns què passa, des de quan i a quina zona ets, i t'indicarem com et podem ajudar."
         message={whatsappMessages.electricidad}
       />
     </>

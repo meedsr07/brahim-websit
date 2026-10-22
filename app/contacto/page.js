@@ -19,9 +19,9 @@ import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Contacte | Electricitat i lampisteria a Girona",
+  title: "Contacte Lampisteria Girona 24/7 | Truca o WhatsApp",
   description:
-    "Contacta per WhatsApp o telèfon per consultar un servei d'electricitat o lampisteria a Girona. T'indiquem com demanar pressupost.",
+    "Truca o escriu per WhatsApp per a una urgència de lampisteria o electricitat a Girona. Atenció 24/7 i pressupost sense compromís.",
   path: "/contacto",
 });
 
@@ -57,12 +57,13 @@ export default function ContactoPage() {
                 Contacte directe · {business.location.city}
               </p>
               <h1 className="mt-5 font-display text-[clamp(2.65rem,5.2vw,4.6rem)] leading-[0.99] tracking-[-0.035em] text-ink [text-wrap:balance]">
-                Contacta amb un electricista i un lampista a Girona
+                Contacta amb un lampista i electricista d'urgència a Girona
+                24/7
               </h1>
               <p className="mt-6 max-w-xl text-[15px] leading-7 text-muted sm:text-base sm:leading-8">
                 Tria WhatsApp o telèfon. Explica'ns què necessites i
-                t'indicarem com et podem ajudar. Aquest web no utilitza
-                formularis de contacte.
+                t'indicarem com et podem ajudar, amb pressupost clar i preus
+                econòmics. Aquest web no utilitza formularis de contacte.
               </p>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -80,7 +81,7 @@ export default function ContactoPage() {
                       WhatsApp
                     </span>
                     <span className="mt-1 flex items-center gap-2 text-xs font-semibold text-muted">
-                      Obre la conversa
+                      Urgències 24/7
                       <ArrowRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                     </span>
                   </span>
@@ -98,7 +99,7 @@ export default function ContactoPage() {
                       {business.contact.phoneDisplay}
                     </span>
                     <span className="mt-1 flex items-center gap-2 text-xs font-semibold text-muted">
-                      Truca ara
+                      Truca ara · 24/7
                       <ArrowRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                     </span>
                   </span>
@@ -145,8 +146,8 @@ export default function ContactoPage() {
                 />
               </div>
               <p className="mt-4 text-xs leading-6 text-cream/45">
-                No prometem un temps de resposta. La disponibilitat es
-                confirma en parlar amb tu.
+                Atenem urgències 24/7. El temps d'arribada es confirma en
+                parlar amb tu, segons la zona i el moment.
               </p>
             </div>
           </div>
@@ -244,16 +245,23 @@ export default function ContactoPage() {
                   Horari
                 </dt>
                 <dd className="text-right font-bold text-ink">
-                  Consulta la disponibilitat
+                  {business.hours.display}
                 </dd>
               </div>
               <div className="flex items-start justify-between gap-4 py-4">
                 <dt className="flex items-center gap-2 text-muted">
                   <AlertIcon className="h-4 w-4 text-amber-deep" />
-                  Urgències elèctriques
+                  Urgències
+                </dt>
+                <dd className="text-right font-bold text-ink">24/7</dd>
+              </div>
+              <div className="flex items-start justify-between gap-4 py-4">
+                <dt className="flex items-center gap-2 text-muted">
+                  <CheckIcon className="h-4 w-4 text-amber-deep" />
+                  Preus
                 </dt>
                 <dd className="text-right font-bold text-ink">
-                  Segons disponibilitat
+                  {business.priceRangeLabel}
                 </dd>
               </div>
               <div className="flex items-start justify-between gap-4 py-4">
@@ -281,14 +289,14 @@ export default function ContactoPage() {
       </section>
 
       <FAQ
-        title="Preguntes freqüents sobre el contacte"
-        intro="Com funciona el contacte, què pots enviar i com confirmem la disponibilitat."
+        title="Preguntes freqüents sobre el contacte i l'horari"
+        intro="Com funciona el contacte, què pots enviar i com confirmem la disponibilitat 24/7."
         items={contactFaqs}
       />
 
       <FinalCTA
-        title="Escriu-nos i explica'ns què necessites"
-        text="Som a Girona i atenem electricitat i lampisteria. Tria WhatsApp o telèfon per consultar el teu cas i demanar pressupost."
+        title="Truca'ns o escriu-nos: atenem 24/7 a Girona"
+        text="Som a Girona i atenem urgències de lampisteria i electricitat a qualsevol hora. Tria WhatsApp o telèfon per consultar el teu cas i demanar pressupost."
         message={whatsappMessages.contacto}
       />
     </>

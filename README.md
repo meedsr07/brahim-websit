@@ -20,6 +20,20 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Local SEO and Netlify
+
+- Set `NEXT_PUBLIC_SITE_URL` to the production domain (for example,
+  `https://your-domain.com`). If it is empty on Netlify, the build falls back
+  to Netlify's `URL` environment variable.
+- The homepage metadata and the `LocalBusiness` JSON-LD live in
+  `lib/seo.js` and `lib/schema.js`. Business data (phone, hours, price range,
+  keywords) is centralized in `lib/business.js`.
+- Before publishing, confirm that the 24/7 emergency service and the
+  `priceRange` are accurate. If they change, update `business.hours` and
+  `business.priceRange`; the website, metadata, and schema update together.
+- For a stronger LocalBusiness result, add the real street address, postal
+  code, coordinates, and Google Business Profile URL when they are available.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

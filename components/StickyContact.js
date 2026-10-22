@@ -12,17 +12,17 @@ export default function StickyContact() {
         <div className="mx-auto grid max-w-md grid-cols-2 gap-2.5">
           <a
             href={business.contact.telHref}
-            aria-label={`Truca al ${business.contact.phoneDisplay}`}
+            aria-label={`Truca al ${business.contact.phoneDisplay}. Atenció 24 hores.`}
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[2px] border border-ink/20 bg-transparent px-3 text-[13px] font-extrabold text-ink"
           >
             <PhoneIcon className="h-[18px] w-[18px]" />
-            Trucar
+            Trucar 24/7
           </a>
           <a
             href={whatsappUrl(whatsappMessages.general)}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Consulta per WhatsApp. WhatsApp s'obre en una pestanya nova."
+            aria-label="Urgència per WhatsApp 24/7. WhatsApp s'obre en una pestanya nova."
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[2px] bg-[#1B6B4A] px-3 text-[13px] font-extrabold text-white"
           >
             <WhatsAppIcon className="h-[18px] w-[18px]" />

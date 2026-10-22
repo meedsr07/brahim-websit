@@ -12,7 +12,7 @@ export default function PageHero({
   imageAlt,
   message,
   primaryLabel = "Demanar pressupost",
-  secondaryLabel = "Truca ara",
+  secondaryLabel = "Truca ara · 24/7",
   caption = "Imatge de referència de l'ofici.",
   bullets = [],
 }) {
@@ -77,7 +77,7 @@ export default function PageHero({
                 className="object-cover"
               />
               <div className="absolute left-0 top-6 bg-amber px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.2em] text-ink">
-                {business.location.city} · Servei local
+                {business.location.city} · Urgències 24/7
               </div>
             </div>
             <figcaption className="mt-4 flex items-center justify-between gap-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">

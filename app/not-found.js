@@ -3,7 +3,9 @@ import { ArrowRightIcon, MapPinIcon } from "@/components/Icons";
 import { business, whatsappMessages } from "@/lib/business";
 
 export const metadata = {
-  title: { absolute: "Página no encontrada | Electricidad y Fontanería Girona" },
+  title: {
+    absolute: "Pàgina no trobada | Lampisteria i electricitat Girona 24/7",
+  },
   robots: { index: false, follow: false },
 };
 

@@ -14,7 +14,8 @@ export default function ServiceSidebar({ items, message }) {
           T'ajudem amb el teu cas?
         </p>
         <p className="mt-2 text-xs leading-6 text-muted">
-          Explica'ns què passa al teu habitatge o local a {business.location.city}.
+          Explica'ns què passa al teu habitatge o local a{" "}
+          {business.location.city}. Atenem urgències 24/7.
         </p>
         <WhatsAppButton
           message={message || whatsappMessages.general}
@@ -51,7 +52,7 @@ export default function ServiceSidebar({ items, message }) {
 
       <p className="mt-6 flex items-center gap-2 border-t border-line pt-5 text-xs font-semibold text-muted">
         <MapPinIcon className="h-4 w-4 text-amber-deep" />
-        {business.location.city} · Servei local
+        {business.location.city} · Urgències 24/7
       </p>
     </aside>
   );
