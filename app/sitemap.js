@@ -1,4 +1,6 @@
-import { absoluteUrl, siteUrl } from "@/lib/business";
+import { absoluteUrl } from "@/lib/business";
+
+const BASE_URL = "https://lampisteriaelectricitatgirona.online";
 
 const routes = [
   {
@@ -28,14 +30,12 @@ const routes = [
 ];
 
 export default function sitemap() {
-  if (!siteUrl) return [];
-
   return routes.map((route) => ({
-    url: absoluteUrl(route.path),
+    url: `${BASE_URL}${route.path}`,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
     ...(route.images.length
-      ? { images: route.images.map((image) => absoluteUrl(image)) }
+      ? { images: route.images.map((image) => `${BASE_URL}${image}`) }
       : {}),
   }));
 }
