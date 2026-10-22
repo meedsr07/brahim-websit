@@ -10,6 +10,7 @@ export default function PageHero({
   intro,
   image,
   imageAlt,
+  imagePosition = "object-center",
   message,
   primaryLabel = "Demanar pressupost",
   secondaryLabel = "Truca ara · 24/7",
@@ -67,14 +68,15 @@ export default function PageHero({
               aria-hidden="true"
               className="absolute -bottom-3 -right-3 hidden h-full w-full border border-amber/45 sm:block"
             />
-            <div className="relative aspect-[4/3] overflow-hidden bg-ink">
+            <div className="relative aspect-[4/3] overflow-hidden bg-ink shadow-[0_28px_60px_-42px_rgba(11,32,39,0.6)]">
               <Image
                 src={image}
                 alt={imageAlt}
                 fill
-                priority
+                preload
+                quality={85}
                 sizes="(min-width: 1024px) 46vw, 100vw"
-                className="object-cover"
+                className={`object-cover ${imagePosition}`}
               />
               <div className="absolute left-0 top-6 bg-amber px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.2em] text-ink">
                 {business.location.city} · Urgències 24/7

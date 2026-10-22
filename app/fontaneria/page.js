@@ -55,8 +55,9 @@ export default function FontaneriaPage() {
         eyebrow="Lampista Girona · 24/7"
         title="Lampista d'urgència a Girona 24/7: fuites, reparacions i instal·lacions"
         intro="Tens una fuita, una aixeta que goteja o una cisterna que no para? Atenem lampisteria d'urgència a Girona 24/7, amb preus econòmics i pressupost abans d'intervenir."
-        image={media.fontaneriaBano.image}
-        imageAlt={media.fontaneriaBano.alt}
+        image={media.lampistaTuberies.image}
+        imageAlt={media.lampistaTuberies.alt}
+        imagePosition="object-[45%_45%]"
         message={whatsappMessages.fontaneria}
         bullets={["Urgències 24/7", "Fuites i humitats", "Reparacions", "Instal·lacions"]}
       />
@@ -221,11 +222,11 @@ export default function FontaneriaPage() {
           <figure>
             <div className="relative aspect-[4/5] overflow-hidden bg-ink-soft">
               <Image
-                src={media.fontaneriaTuberias.image}
-                alt={media.fontaneriaTuberias.alt}
+                src={media.lampistaCaldera.image}
+                alt={media.lampistaCaldera.alt}
                 fill
                 sizes="(min-width: 1024px) 42vw, 100vw"
-                className="object-cover"
+                className="object-cover object-[68%_50%]"
               />
             </div>
             <figcaption className="mt-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-cream/40">

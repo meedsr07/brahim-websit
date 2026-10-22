@@ -19,18 +19,18 @@ export default function CraftSection() {
                   alt={media.fontaneriaGrifo.alt}
                   fill
                   sizes="(min-width: 1024px) 30vw, 55vw"
-                  className="object-cover"
+                  className="object-cover object-[50%_45%]"
                 />
               </div>
             </figure>
             <figure className="col-span-2 mb-8 overflow-hidden border-[5px] border-paper bg-ink shadow-[0_18px_40px_-24px_rgba(11,32,39,0.4)] sm:mb-12">
               <div className="relative aspect-[4/5]">
                 <Image
-                  src={media.electricidadCableado.image}
-                  alt={media.electricidadCableado.alt}
+                  src={media.electricistaInstallacio.image}
+                  alt={media.electricistaInstallacio.alt}
                   fill
                   sizes="(min-width: 1024px) 20vw, 38vw"
-                  className="object-cover"
+                  className="object-cover object-[55%_45%]"
                 />
               </div>
             </figure>

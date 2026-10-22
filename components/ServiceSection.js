@@ -13,6 +13,7 @@ export default function ServiceSection({
   message,
   image,
   imageAlt,
+  imagePosition = "object-center",
   reverse = false,
   tone = "cream",
 }) {
@@ -30,13 +31,14 @@ export default function ServiceSection({
               reverse ? "-left-3" : "-right-3"
             }`}
           />
-          <div className="relative aspect-[5/4] overflow-hidden bg-ink">
+          <div className="relative aspect-[5/4] overflow-hidden bg-ink shadow-[0_24px_55px_-42px_rgba(11,32,39,0.55)]">
             <Image
               src={image}
               alt={imageAlt}
               fill
+              quality={82}
               sizes="(min-width: 1024px) 48vw, (min-width: 640px) 90vw, 100vw"
-              className="object-cover"
+              className={`object-cover ${imagePosition}`}
             />
             <span className="absolute left-0 top-0 inline-flex h-12 min-w-12 items-center justify-center bg-amber px-3 text-sm font-extrabold tracking-[0.12em] text-ink">
               {number}

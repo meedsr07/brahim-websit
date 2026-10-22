@@ -66,8 +66,9 @@ export default function HomePage() {
           href="/electricidad"
           linkLabel="Veure serveis d'electricitat"
           message={whatsappMessages.electricidad}
-          image={media.electricidadCuadro.image}
-          imageAlt={media.electricidadCuadro.alt}
+          image={media.electricistaQuadre.image}
+          imageAlt={media.electricistaQuadre.alt}
+          imagePosition="object-[50%_45%]"
           tone="cream"
         />
 
@@ -85,8 +86,9 @@ export default function HomePage() {
           href="/fontaneria"
           linkLabel="Veure serveis de lampisteria"
           message={whatsappMessages.fontaneria}
-          image={media.fontaneriaSifon.image}
-          imageAlt={media.fontaneriaSifon.alt}
+          image={media.lampistaTuberies.image}
+          imageAlt={media.lampistaTuberies.alt}
+          imagePosition="object-[42%_50%]"
           reverse
           tone="paper"
         />

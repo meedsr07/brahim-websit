@@ -85,14 +85,15 @@ export default function Hero() {
           />
 
           <figure className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden bg-ink">
+            <div className="relative aspect-[4/3] overflow-hidden bg-ink shadow-[0_28px_60px_-42px_rgba(11,32,39,0.6)]">
               <Image
                 src={media.heroElectricidad.image}
                 alt={media.heroElectricidad.alt}
                 fill
-                priority
+                preload
+                quality={85}
                 sizes="(min-width: 1024px) 48vw, 100vw"
-                className="object-cover"
+                className="object-cover object-[50%_42%]"
               />
               <div className="absolute left-0 top-5 bg-amber px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.2em] text-ink">
                 Electricitat · Lampisteria · 24/7
@@ -135,7 +136,7 @@ export default function Hero() {
                 alt={media.heroFontaneria.alt}
                 fill
                 sizes="(min-width: 1024px) 16vw, 25vw"
-                className="object-cover"
+                className="object-cover object-[68%_50%]"
               />
             </div>
           </div>

@@ -5,19 +5,19 @@ const routes = [
     path: "/",
     changeFrequency: "monthly",
     priority: 1,
-    images: ["/images/hero-electricidad.webp", "/images/hero-fontaneria.webp"],
+    images: ["/images1/electricista-installacio.webp", "/images1/lampista-caldera.webp"],
   },
   {
     path: "/electricidad",
     changeFrequency: "monthly",
     priority: 0.9,
-    images: ["/images/electricidad-cableado.webp"],
+    images: ["/images1/electricista-quadre.webp"],
   },
   {
     path: "/fontaneria",
     changeFrequency: "monthly",
     priority: 0.9,
-    images: ["/images/fontaneria-bano.webp"],
+    images: ["/images1/lampista-tuberies.webp"],
   },
   {
     path: "/contacto",

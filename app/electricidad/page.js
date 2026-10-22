@@ -81,8 +81,9 @@ export default function ElectricidadPage() {
         eyebrow="Electricista Girona · 24/7"
         title="Electricista d'urgència a Girona 24/7: avaries, instal·lacions i manteniment"
         intro="Tens una avaria elèctrica o necessites una instal·lació a Girona? Atenem urgències 24/7, amb diagnosi clara, preus econòmics i pressupost abans d'intervenir."
-        image={media.electricidadCableado.image}
-        imageAlt={media.electricidadCableado.alt}
+        image={media.electricistaQuadre.image}
+        imageAlt={media.electricistaQuadre.alt}
+        imagePosition="object-[50%_45%]"
         message={whatsappMessages.electricidad}
         bullets={["Urgències 24/7", "Diagnosi d'avaries", "Instal·lacions", "Manteniment"]}
       />
