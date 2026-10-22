@@ -1,5 +1,3 @@
-import { absoluteUrl } from "@/lib/business";
-
 const BASE_URL = "https://lampisteriaelectricitatgirona.online";
 
 const routes = [
