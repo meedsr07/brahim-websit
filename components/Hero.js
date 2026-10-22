@@ -26,9 +26,7 @@ export default function Hero() {
           </p>
 
           <h1 className="rise rise-1 mt-5 font-display text-[clamp(2.5rem,5.2vw,4.75rem)] leading-[0.98] tracking-[-0.038em] text-ink [text-wrap:balance]">
-            Lampisteria i electricitat d'urgència a{" "}
-            <span className="italic text-[#A4610E]">Girona</span>, 24/7, amb
-            resposta ràpida i bon preu
+           Lampisterìa urgencias girona  rápido Y barato 24/7
           </h1>
 
           <p className="rise rise-2 mt-6 max-w-xl text-[15px] leading-7 text-muted sm:text-base sm:leading-8">
