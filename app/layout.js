@@ -1,4 +1,5 @@
 import { Fraunces, Manrope } from "next/font/google";
+import Script from "next/script"; // 1. استيراد مكون Script
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -37,6 +38,21 @@ export default function RootLayout({ children }) {
       className={`${manrope.variable} ${fraunces.variable} h-full`}
       data-scroll-behavior="smooth"
     >
+      <head>
+        {/* 2. إضافة كود Google Ads داخل الـ <head> */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18527649467"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18527649467');
+          `}
+        </Script>
+      </head>
       <body className="min-h-full">
         <a
           href="#contenido"
